@@ -1,300 +1,1462 @@
-/* STYLES FOR ABOVE THE FOLD */
 /*-- -------------------------- -->
 <---           Hero             -->
 <--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #hero {
-    z-index: 1;
-    position: relative;
-    /* prevents overflow from the lines extending past the screen width */
+  #hero-1467 {
+    /* 200px - 350px top - leaving extra space for the navigation */
+    /* 100px - 200px bottom */
+    padding: clamp(12.5rem, 25.95vw, 21.875em) 1rem clamp(6.25rem, 7vw, 12.5rem);
+    /* prevents the topper line from causing an overflow */
     overflow: hidden;
-    /* changes on tablet */
-    padding: 0 1rem;
-    padding-bottom: 6.25rem;
-    font-family: "Roboto", "Arial", sans-serif;
-    /* Centers button */
-    text-align: center;
-  }
-  #hero .cs-picture {
-    z-index: -2;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    height: 100%;
-    /* Background Image */
-    width: 100%;
-  }
-  #hero .cs-picture img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    /* Makes image act like a background-image */
-    object-fit: cover;
-  }
-  #hero .cs-picture:before {
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    /* Black Color Overlay */
-    content: "";
-    opacity: 0.7;
-    display: block;
-    background: #000;
-    height: 100%;
-    width: 100%;
-    /* prevents the cursor from interacting with it */
-    pointer-events: none;
-  }
-  #hero .cs-container {
     position: relative;
-    margin: auto;
-    max-width: 80em;
+    z-index: 1;
+  }
+  #hero-1467 .cs-container {
     width: 100%;
-    /* we put the padding top and bottom on the container instead of #Hero so the pseudo element lines go to the top and bottom of the section */
-    /* 144px - 280px - leaving extra space for the navigation */
-    /* changes on tablet */
-    padding: clamp(9em, 25.95vw, 17.5em) 0;
-  }
-  #hero .cs-container:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    /* Left Line */
-    content: "";
-    opacity: 1;
-    display: block;
-    background: -moz-linear-gradient(top, rgba(250, 251, 252, 0.5) 0%, rgba(250, 251, 252, 0) 100%);
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(250, 251, 252, 0.5) 0%, rgba(250, 251, 252, 0) 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    height: 100%;
-    width: 1px;
-  }
-  #hero .cs-flex-group {
+    /* changes to 1280px at desktop */
+    max-width: 44rem;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: flex-start;
-    margin: auto;
-    /* 60px - 220px */
-    margin-bottom: clamp(3.75em, 15.5vw, 13.75em);
-    /* 464px - 562px */
-    max-width: clamp(29em, 60vw, 35.125em);
-    width: 80vw;
-    box-sizing: border-box;
-  }
-  #hero .cs-topper {
-    margin-bottom: 1rem;
-    color: var(--primary);
-    text-align: center;
-  }
-  #hero .cs-title {
-    width: 100%;
-    color: var(--bodyTextColorWhite);
-    text-align: center;
-  }
-  #hero .cs-text {
-    /* 32px - 40px */
-    margin: 0 auto clamp(2rem, 4vw, 2.5rem) 0;
-    /* 40px - 48px */
-    margin-bottom: clamp(2.5rem, 4vw, 3rem);
-    color: var(--bodyTextColorWhite);
-    text-align: center;
-  }
-  #hero .cs-button-solid {
-    margin-bottom: 1rem;
-    height: initial;
-    line-height: clamp(2.875em, 5.5vw, 3.5em);
-  }
-  #hero .cs-button-transparent {
-    z-index: 1;
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
     align-items: center;
-    border: 1px solid var(--bodyTextColorWhite);
-    margin: 0 0.5rem;
-    background-color: transparent;
-    /* 46px - 56px */
-    height: clamp(2.875em, 5.5vw, 3.5em);
-    width: 11.25rem;
-    box-sizing: border-box;
-    padding: 0;
-    text-decoration: none;
-    font-size: 1rem;
-    /* 46px - 56px */
-    line-height: clamp(2.875em, 5.5vw, 3.5em);
+    gap: 3rem;
+  }
+  #hero-1467 .cs-content {
+    text-align: center;
+    width: 100%;
+    max-width: 35.625rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+  }
+  #hero-1467 .cs-flex {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+  }
+  #hero-1467 .cs-title {
+    /* 39px - 49px */
+    font-size: clamp(2.4375rem, 6.4vw, 3.0625rem);
     font-weight: 700;
+    line-height: 1.2em;
+    text-align: inherit;
+    max-width: 51.8125rem;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+  }
+  #hero-1467 .cs-title:before {
+    content: '';
+    width: 3.75rem;
+    height: 8px;
+    margin: 0 auto 2rem;
+    background: var(--primaryLight);
+    border-radius: 8px;
+    opacity: 1;
+    display: block;
+  }
+  #hero-1467 .cs-text {
+    /* 16px - 20px */
+    font-size: clamp(1rem, 1.95vw, 1.25rem);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    /* 464px - 622px */
+    max-width: clamp(29rem, 60vw, 38.785rem);
+    margin: 0;
+    margin-bottom: 2rem;
     color: #fff;
   }
-  #hero .cs-button-transparent .cs-img {
-    display: block;
-    margin-right: 0.75rem;
+  #hero-1467 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    min-width: 12.5rem;
+    padding: 0 1.5rem;
+    background-color: var(--primaryLight);
+    border-radius: 3.125rem;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
   }
-  #hero .cs-button-transparent:before {
-    z-index: -1;
-    position: absolute;
-    /* so it sits on top of the border */
-    top: -1px;
-    bottom: -1px;
-    left: -1px;
-    right: -1px;
+  #hero-1467 .cs-button-solid:before {
     content: "";
-    opacity: 1;
-    /* this is what creates the grow affect on hover */
-    transform: scaleX(0);
-    display: block;
+    position: absolute;
+    height: 100%;
+    width: 0%;
     background: #000;
-    transition: transform 0.3s;
-    transform-origin: left;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
   }
-  #hero .cs-button-transparent:hover:before {
-    transform: scaleX(1);
+  #hero-1467 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #hero-1467 .cs-reviews {
+    /* 40px - 80px */
+    margin-top: clamp(2.5rem, 6vw, 5rem);
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    border-radius: 0.75rem;
+    box-shadow: 0px 8px 100px 0px rgba(0, 0, 0, 0.08);
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    /* 8px - 16px */
+    gap: clamp(0.5rem, 2vw, 1rem);
+    position: relative;
+    z-index: -1;
+  }
+  #hero-1467 .cs-reviews-flex {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  #hero-1467 .cs-stars {
+    margin: 0 0 0.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+  }
+  #hero-1467 .cs-icon {
+    width: 1rem;
+    height: auto;
+  }
+  #hero-1467 .cs-desc {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    max-width: 20ch;
+    margin: 0;
+    color: #f7f7f7;
+  }
+  #hero-1467 .cs-reviews-img {
+    width: 3rem;
+    height: auto;
+    margin: 0 -1rem 0 0;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background-color: #fff;
+  }
+  #hero-1467 .cs-reviews-number {
+    font-size: 1rem;
+    font-weight: 700;
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--secondary);
+    color: var(--bodyTextColorWhite);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #hero-1467 .cs-right {
+    text-align: center;
+    width: 100%;
+    /* 16px - 48px left & right */
+    /* 32px - 48px top & bottom */
+    padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 4vw, 3rem);
+    box-sizing: border-box;
+    border-radius: 1.5rem;
+    border-top: 8px solid var(--primaryLight);
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  #hero-1467 .cs-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 1.75rem;
+    padding: 0 2rem 0 1.75rem;
+    overflow: hidden;
+    color: var(--bodyTextColorWhite);
+    border-radius: 2.5rem;
+    display: inline-block;
+    position: absolute;
+    top: 0.5rem;
+    right: 0;
+    z-index: 1;
+    transform: rotate(14deg);
+    transform-origin: right;
+  }
+  #hero-1467 .cs-tag:before {
+    /* background color */
+    content: '';
+    height: 100%;
+    background: var(--secondary);
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 20px;
+    z-index: -1;
+  }
+  #hero-1467 .cs-tag:after {
+    /* triangle */
+    content: '';
+    width: 1.5625rem;
+    height: 1.5625rem;
+    background-color: var(--secondary);
+    opacity: 1;
+    overflow: hidden;
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 0.375rem;
+    z-index: -1;
+    transform: translateY(-50%) rotate(45deg);
+  }
+  #hero-1467 .cs-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    right: 0.9375rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  #hero-1467 .cs-h3 {
+    /* 31px - 39px */
+    font-size: clamp(1.9375rem, 4vw, 2.4375rem);
+    font-weight: 900;
+    text-align: inherit;
+    max-width: 20ch;
+    margin: 0 0 0.5rem 0;
+    color: var(--headerColor);
+  }
+  #hero-1467 .cs-expires {
+    font-size: 1rem;
+    line-height: 1.5em;
+    text-align: inherit;
+    margin: 0 0 1rem 0;
+    color: var(--secondary);
+    display: block;
+  }
+  #hero-1467 .cs-form-text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    max-width: 40.625rem;
+    margin: 0 0 1.5rem 0;
+    color: var(--bodyTextColor);
+  }
+  #hero-1467 .cs-form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+  }
+  #hero-1467 .cs-label {
+    font-size: 0.875rem;
+    width: 100%;
+    color: #767676;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  #hero-1467 .cs-input,
+  #hero-1467 select {
+    font-size: 1rem;
+    width: 100%;
+    height: 3.5rem;
+    padding: 0;
+    padding-left: 1.5rem;
+    color: var(--bodyTextColor);
+    background-color: #f7f7f7;
+    border: none;
+    border-radius: 0.5rem;
+    /* prevents padding from adding to height and width */
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+  }
+  #hero-1467 .cs-input:hover,
+  #hero-1467 select:hover {
+    border-color: var(--secondary);
+  }
+  #hero-1467 .cs-input:focus,
+  #hero-1467 select:focus {
+    outline: 1px solid var(--secondary);
+  }
+  #hero-1467 .cs-input::placeholder,
+  #hero-1467 select::placeholder {
+    color: #7d799c;
+    opacity: 0.6;
+  }
+  #hero-1467 .cs-textarea {
+    min-height: 5.9375rem;
+    padding-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-family: inherit;
+  }
+  #hero-1467 .cs-submit {
+    text-transform: uppercase;
+    width: 100%;
+    margin: 0 0 1rem 0;
+    border: none;
+  }
+  #hero-1467 .cs-submit:hover {
+    cursor: pointer;
+  }
+  #hero-1467 .cs-disclaimer {
+    font-size: 0.875rem;
+    text-align: left;
+    line-height: 1.5em;
+    margin: 0 auto 0 0;
+    color: var(--bodyTextColor);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  #hero-1467 .cs-disclaimer-icon {
+    width: 1.25rem;
+    height: auto;
+  }
+  #hero-1467 .cs-background {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+  }
+  #hero-1467 .cs-background:before {
+    /* Overlay */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #1a1a1a 0%, rgba(26, 26, 26, 0) 80%);
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* prevents the cursor from interacting with it */
+    pointer-events: none;
+  }
+  #hero-1467 .cs-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 95%;
+    width: 100%;
+    object-fit: cover;
   }
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #hero {
-    /* 32px - 40px */
-    padding: 0 clamp(2em, 5vw, 2.5em);
+  #hero-1467 .cs-form {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
   }
-  #hero .cs-container {
-    padding: clamp(7em, 27.95vw, 17.5em) 0 clamp(9em, 30.95vw, 23.5em) 0;
+  #hero-1467 .cs-label {
+    grid-column: span 12;
   }
-  #hero .cs-container:after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    /* Right Line */
-    content: "";
-    opacity: 1;
-    display: block;
-    background: -moz-linear-gradient(top, rgba(250, 251, 252, 0) 0%, rgba(250, 251, 252, 0.5) 100%);
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(250, 251, 252, 0) 0%, rgba(250, 251, 252, 0.5) 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    height: 100%;
-    width: 1px;
+  #hero-1467 .cs-label:nth-of-type(1),
+  #hero-1467 .cs-label:nth-of-type(2),
+  #hero-1467 .cs-label:nth-of-type(3),
+  #hero-1467 .cs-label:nth-of-type(4) {
+    grid-column: span 6;
   }
-  #hero .cs-button-solid {
-    margin-right: 1.25rem;
-    margin-bottom: 0;
+  #hero-1467 .cs-submit {
+    grid-column: span 12;
   }
 }
-/* Desktop Parallax Effect - 1300px */
-@media only screen and (min-width: 81.25em) {
-  #hero {
-    background: url("/assets/images/landing.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    /* creates parallax effect on background image */
-    background-attachment: fixed;
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #hero-1467 .cs-container {
+    max-width: 80rem;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
   }
-}
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-  body.dark-mode #hero .cs-background:before {
-    opacity: 0.8;
+  #hero-1467 .cs-right {
+    align-items: flex-start;
+  }
+  #hero-1467 .cs-title:before {
+    margin-left: 0;
+  }
+  #hero-1467 .cs-content {
+    text-align: left;
+    align-items: flex-start;
+  }
+  #hero-1467 .cs-flex {
+    text-align: left;
+    align-items: flex-start;
   }
 }
 /*-- -------------------------- -->
-<---          Services          -->
+<---   Side By Side Reverse     -->
 <--- -------------------------- -*/
-/* Mobile */
+/* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  .services {
-    z-index: 100;
-    position: relative;
-    border-top: 0.375em solid var(--primary);
-    border-radius: 0.3125em;
-    margin: auto;
-    margin-top: calc(-167 / 16 * 1em);
-    margin-bottom: 3.125em;
-    background: #fff;
-    max-width: 82.5em;
-    width: 90%;
-    padding: 3.125em 1.25em;
-    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+  #sbsr-99 {
+    padding: var(--sectionPadding);
   }
-  .services .card {
-    display: block;
-    margin: auto;
-    margin-bottom: 3.125em;
-    max-width: 22.3125em;
+  #sbsr-99 .cs-container {
     width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 34.375rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px, changed clamp at tablet */
+    gap: clamp(3rem, 6vw, 4rem);
   }
-  .services .card picture {
+  #sbsr-99 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    max-width: 33.875rem;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  #sbsr-99 .cs-title {
+    max-width: 17ch;
+  }
+  #sbsr-99 .cs-text {
+    margin-bottom: 1rem;
+  }
+  #sbsr-99 .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #sbsr-99 .cs-ul {
+    margin: 0 0 2rem 0;
+    /* 16px - 20px */
+    padding-left: clamp(1rem, 2vw, 1.25rem);
+  }
+  #sbsr-99 .cs-li {
+    list-style: none;
+    /* 14px - 18px */
+    font-size: clamp(0.875rem, 1.3vw, 1.125rem);
+    line-height: 1.5em;
+    /* 8px - 12px */
+    margin-bottom: clamp(0.5rem, 1vw, 0.75rem);
+    color: var(--bodyTextColor);
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  #sbsr-99 .cs-li:last-of-type {
+    margin-bottom: 0;
+  }
+  #sbsr-99 .cs-number {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.6vw, 1rem);
+    /* 24px - 28px */
+    width: clamp(1.5rem, 2.9vw, 1.75rem);
+    height: clamp(1.5rem, 2.9vw, 1.75rem);
+    margin-right: 0.75rem;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
-    margin: auto;
-    margin-bottom: 1.4375em;
-    background: var(--primary);
-    height: 5.5em;
-    width: 5.5em;
+    /* we set this element to align to the top of the li, so if there's 
+            multiple lines it will stay at the top instead of the center of the text */
+    align-self: flex-start;
+    /* prevents flexbox from squishing it */
+    flex: none;
   }
-  .services .card picture img {
-    height: 3em;
-    width: 3em;
-  }
-  .services .card h2 {
-    margin-bottom: 0.65em;
-    font-size: 2em;
-    line-height: 1.35em;
+  #sbsr-99 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
     font-weight: 700;
-    color: #1a1a1a;
     text-align: center;
+    margin: 0;
+    color: #fff;
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    border-radius: 0.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
   }
-  .services .card p {
-    opacity: 0.7;
+  #sbsr-99 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.25rem;
+    transition: width 0.3s;
+  }
+  #sbsr-99 .cs-button-solid:hover:before {
     width: 100%;
-    line-height: 1.33333333em;
-    text-align: center;
   }
-  .services .card:last-of-type {
-    margin-bottom: 0;
+  #sbsr-99 .cs-picture {
+    width: 100%;
+    margin: 0;
+    position: relative;
+    display: block;
+    /* width divided by height */
+    aspect-ratio: 328/420;
+  }
+  #sbsr-99 .cs-picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
 }
-/* Inbetween */
-@media only screen and (min-width: 768px) {
-  .services {
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #sbsr-99 .cs-container {
+    max-width: 80rem;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    /* 60px - 108px */
+    gap: clamp(3.75rem, 7.8vw, 6.75rem);
+  }
+  #sbsr-99 .cs-picture {
+    /* 284px - 522px */
+    width: clamp(17.75rem, 39.3vw, 32.625rem);
+    /* 492px - 740px */
+    height: clamp(30.75rem, 60.9vw, 46.25rem);
+    /* prevents flexbox from squishing it */
+    flex: none;
+    /* sends it to the right in the 2nd position */
+    order: 2;
+  }
+}
+/*-- -------------------------- -->
+<---         Donations          -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #donations {
+    padding: var(--sectionPadding);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    position: relative;
+    z-index: 1;
+  }
+  #donations .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 43.75rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+    position: relative;
+    z-index: 10;
+  }
+  #donations .cs-content-donations {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    max-width: 20rem;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #donations .cs-topper {
+    color: var(--secondary);
+  }
+  #donations .cs-title {
+    color: var(--bodyTextColorWhite);
+  }
+  #donations .cs-text {
+    margin-bottom: 1rem;
+    color: var(--bodyTextColorWhite);
+    opacity: 0.8;
+  }
+  #donations .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #donations .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    min-width: 9.375rem;
+    padding: 0 2rem;
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    transition: color 0.3s;
+  }
+  #donations .cs-button-solid:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #fff;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.5rem;
+    transition: width 0.3s;
+  }
+  #donations .cs-button-solid:hover {
+    color: var(--primary);
+  }
+  #donations .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #donations .cs-card-group {
+    width: 100%;
+    /* changes to 630px at large desktop */
+    max-width: 59rem;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.25rem;
+  }
+  #donations .cs-item {
+    text-align: left;
+    list-style: none;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0px 4px 120px 0px rgba(0, 0, 0, 0.12);
+    grid-column: span 12;
+    position: relative;
+    z-index: 1;
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  #donations .cs-item:hover {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  #donations .cs-item:hover .cs-picture img {
+    opacity: 0.3;
+    transform: scale(1.1);
+  }
+  #donations .cs-item:hover .cs-h3 {
+    color: var(--primary);
+  }
+  #donations .cs-link {
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+  #donations .cs-picture {
+    width: 100%;
+    height: 15rem;
+    background-color: var(--primary);
+    overflow: hidden;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  #donations .cs-picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.6s, opacity 0.3s;
+  }
+  #donations .cs-flex {
+    padding: 1.5rem;
+    /* prblog padding from affecting height and width */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 2;
+  }
+  #donations .cs-h3 {
+    font-size: 1.25rem;
+    text-align: inherit;
+    line-height: 1.2em;
+    font-weight: 700;
+    color: var(--headerColor);
+    margin: 0 0 0.75rem 0;
+    transition: color 0.3s;
+  }
+  #donations .cs-item-text {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    text-align: inherit;
+    margin: 0 0 1.5rem;
+    padding: 0 0 1.5rem;
+    color: var(--bodyTextColor);
+    border-bottom: 1px solid #E8E8E8;
+  }
+  #donations .cs-donations-flex {
+    width: 100%;
+    margin: 0 0 0.5rem;
+  }
+  #donations .cs-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 4px - 8px */
+    gap: clamp(0.25rem, 1vw, 0.5rem);
+  }
+  #donations .cs-progress {
+    width: 100%;
+    height: 6px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: #E8E8E8;
+  }
+  #donations .cs-progress-bar {
+    width: var(--progress);
+    height: 100%;
+    background-color: var(--secondary);
+    border-radius: 0.5rem;
+    display: block;
+  }
+  #donations .cs-percentage {
+    font-size: 0.875rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--headerColor);
+    display: block;
+  }
+  #donations .cs-number-group {
+    width: 100%;
+    margin: 0;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    width: 98%;
-    font-size: min(1.8vw, 1em);
+    align-items: center;
+    gap: 1.5rem;
   }
-  .services .card {
+  #donations .cs-raised {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 0.25rem;
+  }
+  #donations .cs-number {
+    font-size: 0.875rem;
+    line-height: 1.2em;
     margin: 0;
-    max-width: 20.3125em;
+    color: var(--bodyTextColor);
+    display: block;
+  }
+  #donations .cs-stats-container {
+    width: 100%;
+    background-color: transparent;
+    /* changes to 1280px at large desktop */
+    max-width: 59rem;
+    position: relative;
+    z-index: 1;
+  }
+  #donations .cs-stats-group {
+    width: 100%;
+    max-width: 59rem;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    /* 16px - 20px */
+    gap: clamp(1rem, 4vw, 4rem);
+  }
+  #donations .cs-stat {
+    list-style: none;
+    width: 100%;
+    max-width: 25rem;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 16px - 20xp */
+    gap: clamp(1rem, 2vw, 1.25rem);
+    grid-column: span 6;
+  }
+  #donations .cs-info {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  #donations .cs-icon-wrapper {
+    /* 60px - 88px */
+    width: clamp(3.75rem, 7vw, 5.5rem);
+    height: clamp(3.75rem, 7vw, 5.5rem);
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* prevents flexbox from squishing it */
+    flex: none;
+    position: relative;
+    z-index: 1;
+  }
+  #donations .cs-icon-wrapper:before {
+    /* background color */
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: var(--secondary);
+    opacity: 0.1;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+  }
+  #donations .cs-icon {
+    /* 32px - 48px */
+    width: clamp(2rem, 4vw, 3rem);
+    height: auto;
+    display: block;
+  }
+  #donations .cs-stat-number {
+    /* 25px - 39px */
+    font-size: clamp(1.5625rem, 3vw, 2.4375rem);
+    text-align: inherit;
+    line-height: 1.2em;
+    font-weight: 900;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  #donations .cs-desc {
+    /* 14px - 16px */
+    font-size: clamp(0.875em, 3vw, 1rem);
+    text-align: inherit;
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  #donations .cs-background {
+    width: 100%;
+    /* 100% at large desktop */
+    height: 70%;
+    /* removed at large desktop */
+    max-height: 40.625rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #donations .cs-background:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #1A1A1A;
+    opacity: 0.75;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+  #donations .cs-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
   }
 }
-/* Large Desktop */
-@media only screen and (min-width: 1300px) {
-  .services {
-    padding: 3.125em 5em;
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #donations .cs-container {
+    max-width: 80rem;
   }
-  .services .card {
-    max-width: 22.3125em;
+  #donations .cs-item {
+    grid-column: span 4;
+  }
+  #donations .cs-stat {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  #donations .cs-info {
+    text-align: left;
+    align-items: flex-start;
   }
 }
-/* Dark mode */
+/* Large Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+  #donations .cs-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  #donations .cs-content {
+    text-align: left;
+    /* this padding will push down and maintain the same distance between the bottom of the group and the top of the cs-stats-container.  That way when you add or subtract content from this group it will always be the right distance from the stat container below it */
+    padding-bottom: 15.625rem;
+    align-items: flex-start;
+  }
+  #donations .cs-card-group {
+    /* same amount as the translateY value to offset it */
+    margin-bottom: 6.25rem;
+    /* sends it to the left in the 1st position */
+    order: -1;
+    align-self: center;
+  }
+  #donations .cs-item:nth-of-type(2) {
+    transform: translateY(6.25rem);
+  }
+  #donations .cs-card-group {
+    max-width: 50rem;
+  }
+  #donations .cs-stats-container {
+    max-width: 80rem;
+    /* makes it overlap the cs-container so the cards are next to it on the left */
+    margin-top: -4rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+  #donations .cs-stats-container:before {
+    /* white background on the stats */
+    /* we add this to be the background so as the height of the cs-content changes, this white background area will ALWAYS have 36 pixels between the top of it and the stats content below it.  This is an "illusion" we use to create the LOOK of it being the section background so we have mroe control over the white space above the stats group. */
+    content: '';
+    width: 105vw;
+    height: 62.5rem;
+    background: #fff;
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: -2.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+  #donations .cs-stats-group {
+    max-width: 36.5625rem;
+    justify-content: flex-end;
+  }
+  #donations .cs-background {
+    height: 100%;
+    max-height: 100%;
+  }
+  #donations .cs-background:before {
+    background-color: #1A1A1A;
+    opacity: 0;
+  }
+  #donations .cs-title,
+  #donations .cs-text {
+    color: var(--bodyTextColor);
+  }
+}
+/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  body.dark-mode #services {
-    background: var(--medium);
+  #sbs-578 {
+    background-color: #f7f7f7;
+    padding: var(--sectionPadding);
   }
-  body.dark-mode #services picture {
-    background: var(--primaryDark);
+  #sbs-578 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 7vw, 4rem);
   }
-  body.dark-mode #services h2 {
-    font-weight: bold;
+  #sbs-578 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    max-width: 32.625rem;
+    /* moved section padding to the .cs-content so we can have the cs-picture be full width on mobile without the padding preventing it from doing so */
+    padding: var(--sectionPadding);
+    padding-top: 0;
+    /* prevents padding from affecting width and height */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  #sbs-578 .cs-text {
+    margin-bottom: 1rem;
+  }
+  #sbs-578 .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #sbs-578 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
     color: #fff;
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    border-radius: 0.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+  #sbs-578 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.25rem;
+    transition: width 0.3s;
+  }
+  #sbs-578 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #sbs-578 .cs-picture {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 18.75rem;
+  }
+  #sbs-578 .cs-picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #sbs-578 .cs-container {
+    flex-direction: row;
+    justify-content: flex-start;
+    /* 60px - 128px */
+    gap: clamp(3.75rem, 10vw, 8rem);
+  }
+  #sbs-578 .cs-content {
+    width: 53%;
+    /* reset the padding, add the section padding back to the section container */
+    padding: 0;
+  }
+  #sbs-578 .cs-picture {
+    width: 47vw;
+    max-width: 30.875rem;
+    /* 518px - 700px */
+    height: clamp(32.375rem, 63vw, 43.75rem);
+    /* 16px - 28px, added margin left and bottom to cs-picture so it pushes away by the same amount the yellow box element overlaps it left and bottom. This maintains consistent spacing left and bottom */
+    margin: 0 0 clamp(1rem, 2.4vw, 1.75rem) clamp(1rem, 2.4vw, 1.75rem);
+    position: relative;
+  }
+  #sbs-578 .cs-picture:before {
+    /* yellow box */
+    content: "";
+    width: 50%;
+    height: 60%;
+    background: var(--secondary);
+    opacity: 1;
+    display: block;
+    border-radius: 10px;
+    position: absolute;
+    /* 16px - 28px, wrapped in calc function to multiple by negative 1 and get a negative clamp value */
+    bottom: calc(clamp(1rem, 2.4vw, 1.75rem)*-1);
+    left: calc(clamp(1rem, 2.4vw, 1.75rem)*-1);
+  }
+}
+/* Desktop - */
+@media only screen and (min-width: 64rem) {
+  #sbs-578 {
+    background-color: transparent;
+    position: relative;
+  }
+  #sbs-578::before {
+    content: "";
+    background-color: #f7f7f7;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    z-index: -2;
+  }
+}
+/*-- -------------------------- -->
+<---           Stats            -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #stats-316 {
+    padding: var(--sectionPadding);
+    background-color: #f7f7f7;
+  }
+  #stats-316 .cs-card-group {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 37.5em;
+    margin: auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  #stats-316 .cs-item {
+    list-style: none;
+    width: 14.6875rem;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  #stats-316 .cs-picture {
+    width: 5rem;
+    height: 5rem;
+    /* 12px - 20px */
+    margin-right: clamp(0.75rem, 3vw, 1.25rem);
+    border-radius: 50%;
+    border: 1px solid var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  #stats-316 .cs-icon {
+    width: 2.5rem;
+    height: auto;
+  }
+  #stats-316 .cs-flex-group {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  #stats-316 .cs-number {
+    font-size: var(--headerFontSize);
+    color: var(--bodyTextColor);
+    font-weight: 900;
+    line-height: 1.2em;
+    margin: 0;
+    display: block;
+  }
+  #stats-316 .cs-desc {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    color: #858585;
+    display: block;
+  }
+}
+/* Tablet - 650px */
+@media only screen and (min-width: 40.625rem) {
+  #stats-316 .cs-card-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 1.25rem;
+    row-gap: 2rem;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #stats-316 .cs-card-group {
+    max-width: 80rem;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+  }
+}
+/*-- -------------------------- -->
+<---           Stats            -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #stats-1574 {
+    padding: var(--sectionPadding);
+    position: relative;
+  }
+  #stats-1574 .cs-container {
+    list-style: none;
+    width: 100%;
+    /* changes to 1280px on tablet */
+    max-width: 36.5rem;
+    margin: auto;
+  }
+  #stats-1574 .cs-card-group {
+    width: 100%;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: row;
+    /* 16px - 20px */
+    gap: clamp(1rem, 2vw, 1.25rem);
+  }
+  #stats-1574 .cs-item {
+    text-align: center;
+    width: 100%;
+    /* 24px - 40px top & bottom, 16px - 24px sides*/
+    padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1rem, 3vw, 1.5rem);
+    box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #stats-1574 .cs-icon {
+    width: auto;
+    height: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  #stats-1574 .cs-stat {
+    /* 31px - 39px */
+    font-size: clamp(0.9375rem, 2vw, 1.9rem);
+    font-weight: 900;
+    line-height: 1.2em;
+    margin-bottom: 0.25rem;
+    color: var(--headerColor);
+    display: block;
+  }
+  #stats-1574 .cs-info {
+    /* 14px - 20px */
+    font-size: clamp(0.875rem, 2vw, 1.25rem);
+    line-height: 1.5em;
+    color: var(--bodyTextColor);
+  }
+  #stats-1574 .cs-background {
+    width: 100%;
+    height: 9.375rem;
+    object-fit: cover;
+    background-color: #f7f7f7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #stats-1574 .cs-container {
+    max-width: 80rem;
+  }
+  #stats-1574 .cs-card-group {
+    grid-template-columns: repeat(12, 1fr);
+  }
+  #stats-1574 .cs-item {
+    grid-column: span 3;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #stats-1574 .cs-background {
+    height: 50%;
+  }
+}
+/*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #reviews-263 {
+    padding: var(--sectionPadding);
+    position: relative;
+  }
+  #reviews-263 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #reviews-263 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #reviews-263 .cs-text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    max-width: 40.625rem;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  #reviews-263 .cs-title,
+  #reviews-263 .cs-text {
+    color: var(--bodyTextColorWhite);
+  }
+  #reviews-263 .cs-card-group {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+  }
+  #reviews-263 .cs-item {
+    text-align: center;
+    list-style: none;
+    max-width: 23.75rem;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* 20px - 25px */
+    gap: clamp(1.25rem, 3vw, 1.5rem);
+  }
+  #reviews-263 .cs-icon {
+    /* 24px - 30px */
+    width: clamp(1.5rem, 2vw, 1.875rem);
+    height: auto;
+    display: block;
+  }
+  #reviews-263 .cs-item-text {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.6vw, 1rem);
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColorWhite);
+  }
+  #reviews-263 .cs-name {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.6vw, 1rem);
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColorWhite);
+  }
+  #reviews-263 .cs-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    z-index: -1;
+  }
+  #reviews-263 .cs-background:before {
+    /* black overlay */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.7;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  #reviews-263 .cs-background:after {
+    /* brown overlay */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(179deg, rgba(17, 25, 38, 0) -4.32%, rgba(247, 247, 247, 0.6) 40.43%, rgba(247, 247, 247, 0.9) 71.47%, #F7F7F7 100.8%);
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+  #reviews-263 .cs-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #reviews-263 .cs-card-group {
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    /* 16px - 20px */
+    column-gap: clamp(1rem, 1.5vw, 1.25rem);
+    row-gap: 2.875rem;
+  }
+  #reviews-263 .cs-item {
+    /* we do this so it's stackable. You can add new any number of reviews you want and they will stack and center in the middle. We dont use grid because if you have an odd number of reviews, they don't stay centered.  They align with their grid lines. If you want 4 reviews in a row, lower the width under 22.5vw or 23% to get the desired sizes fit 4 in a row and then stack when you add more */
+    width: clamp(31.5%, 30vw, 32.3%);
   }
 }
