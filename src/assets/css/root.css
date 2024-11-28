@@ -11,7 +11,7 @@
     --secondary: #ffbb04;
     --secondaryLight: #ffba43;
     --headerColor: #57826a;
-    --bodyTextColor: #4e4b66;
+    --bodyTextColor: #1a1a1a;
     --bodyTextColorWhite: #fafbfc;
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
@@ -720,7 +720,7 @@
     line-height: 1.5em;
     text-decoration: none;
     margin: 0;
-    color: var(--headerColor);
+    color: var(--secondary);
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -849,7 +849,7 @@
     box-sizing: border-box;
     padding: 0 2rem;
     color: #fff;
-    background-color: var(--primary);
+    background-color: var(--secondary);
     border-radius: 3rem;
     display: inline-block;
     position: relative;

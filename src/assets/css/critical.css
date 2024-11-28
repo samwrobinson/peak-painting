@@ -450,6 +450,7 @@
   }
   #sbsr-99 .cs-title {
     max-width: 17ch;
+    color: var(--bodyTextColor);
   }
   #sbsr-99 .cs-text {
     margin-bottom: 1rem;
@@ -486,7 +487,7 @@
     height: clamp(1.5rem, 2.9vw, 1.75rem);
     margin-right: 0.75rem;
     border-radius: 50%;
-    background: var(--primary);
+    background: var(--primaryLight);
     color: #fff;
     display: flex;
     justify-content: center;
@@ -602,7 +603,7 @@
     /* set text align to left if content needs to be left aligned */
     text-align: center;
     width: 100%;
-    max-width: 20rem;
+    max-width: 24rem;
     display: flex;
     flex-direction: column;
     /* centers content horizontally, set to flex-start to left align */
@@ -907,7 +908,7 @@
     width: 100%;
     height: 100%;
     background-color: #1A1A1A;
-    opacity: 0.75;
+    opacity: 0.5;
     display: block;
     position: absolute;
     top: 0;
@@ -992,7 +993,7 @@
     justify-content: flex-end;
   }
   #donations .cs-background {
-    height: 100%;
+    height: 70%;
     max-height: 100%;
   }
   #donations .cs-background:before {
@@ -1148,6 +1149,9 @@
     height: 80%;
     z-index: -2;
   }
+  #sbs-578 .cs-content {
+    margin-top: 10rem;
+  }
 }
 /*-- -------------------------- -->
 <---           Stats            -->
@@ -1155,7 +1159,6 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #stats-316 {
-    padding: var(--sectionPadding);
     background-color: #f7f7f7;
   }
   #stats-316 .cs-card-group {
@@ -1286,7 +1289,7 @@
   }
   #stats-1574 .cs-info {
     /* 14px - 20px */
-    font-size: clamp(0.875rem, 2vw, 1.25rem);
+    font-size: clamp(0.875rem, 1.15vw, 1.25rem);
     line-height: 1.5em;
     color: var(--bodyTextColor);
   }
@@ -1327,6 +1330,7 @@
   #reviews-263 {
     padding: var(--sectionPadding);
     position: relative;
+    height: 100%;
   }
   #reviews-263 .cs-container {
     width: 100%;
@@ -1358,7 +1362,10 @@
   }
   #reviews-263 .cs-title,
   #reviews-263 .cs-text {
-    color: var(--bodyTextColorWhite);
+    color: var(--bodyTextColor);
+  }
+  #reviews-263 .cs-topper {
+    color: var(--secondary);
   }
   #reviews-263 .cs-card-group {
     padding: 0;
@@ -1392,14 +1399,50 @@
     font-size: clamp(0.875rem, 1.6vw, 1rem);
     line-height: 1.5em;
     margin: 0;
-    color: var(--bodyTextColorWhite);
+    color: var(--bodyTextColor);
   }
   #reviews-263 .cs-name {
     /* 14px - 16px */
     font-size: clamp(0.875rem, 1.6vw, 1rem);
     line-height: 1.5em;
     margin: 0;
-    color: var(--bodyTextColorWhite);
+    color: var(--bodyTextColor);
+  }
+  #reviews-263 .cs-button-solid {
+    font-size: 1rem;
+    margin-top: 2rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    min-width: 12.5rem;
+    padding: 0 1.5rem;
+    background-color: var(--secondary);
+    border-radius: 10px;
+    border: none;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+  #reviews-263 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #reviews-263 .cs-button-solid:hover:before {
+    width: 100%;
   }
   #reviews-263 .cs-background {
     width: 100%;
