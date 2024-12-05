@@ -10,6 +10,9 @@
         /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
         --primary: #57826a;
         --primaryLight: #79BD2C;
+        --main-dark: #1a1a1a;
+        --main-paragraph: #4E4B66;
+        --alert-accent: #F7700F;
         --secondary: #ffbb04;
         --secondaryLight: #ffba43;
         --headerColor: #57826a;
@@ -1115,6 +1118,7 @@
 @media only screen and (min-width: 0rem) {
     #cta-384 {
         padding: var(--sectionPadding);
+        background-color: #1a1a1a;
 
         .cs-container {
             width: 100%;
@@ -1127,6 +1131,10 @@
             gap: clamp(3rem, 6vw, 4rem);
         }
 
+        #button-2 {
+            background-color: var(--primaryLight);
+        }
+
         .cs-content {
             /* set text align to left if content needs to be left aligned */
             text-align: center;
@@ -1136,6 +1144,10 @@
             flex-direction: column;
             /* centers content horizontally, set to flex-start to left align */
             align-items: center;
+        }
+
+        .cs-title, .cs-text {
+            color: #fff;
         }
 
         .cs-text {
@@ -1238,9 +1250,14 @@
 /* Mobile */
 @media only screen and (min-width: 0rem) {
     #footer {
-        background: #1c1c1c;
+        background: #f7f7f7;
         padding: (84/16rem) 0 calc(20 / 16 * 1rem);
+        padding-top: 0;
         font-size: ~"min(4vw, 1.2em)";
+
+        .container {
+            margin-top: 3rem;
+        }
 
         .left-section {
             margin: auto;
@@ -1267,7 +1284,7 @@
                 width: 100%;
                 font-size: (14/16rem);
                 line-height: (27/14rem);
-                color: #fff;
+                color: #606060;
                 text-align: center;
             }
         }
@@ -1293,12 +1310,12 @@
                         margin-bottom: (12/16rem);
                         list-style: none;
                         font-size: (18/16rem);
-                        color: #fff;
+                        color: #606060;
 
                         a {
                             text-decoration: none;
                             line-height: (21/18em);
-                            color: #fff;
+                            color: #606060;
                             transition: color 0.3s;
                             &:hover {
                                 color: var(--primary);
@@ -1312,7 +1329,7 @@
                         font-size: (18/16rem);
                         line-height: (21/18em);
                         font-weight: bold;
-                        color: #fff;
+                        color: #1a1a1a;
 
                         &:before {
                             position: absolute;
@@ -1362,7 +1379,7 @@
             width: 96%;
             font-size: (16/16rem);
             line-height: (36/16rem);
-            color: #fff;
+            color: #1a1a1a;
             text-align: center;
 
             a {
@@ -1393,9 +1410,10 @@
             flex-wrap: nowrap;
             justify-content: space-between;
             margin: auto;
+            padding: 0;
+            margin-top: 5rem;
             max-width: (1320/16rem);
             width: 96%;
-            padding: 0;
         }
 
         .left-section {

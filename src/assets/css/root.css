@@ -8,6 +8,9 @@
     /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
     --primary: #57826a;
     --primaryLight: #79BD2C;
+    --main-dark: #1a1a1a;
+    --main-paragraph: #4E4B66;
+    --alert-accent: #F7700F;
     --secondary: #ffbb04;
     --secondaryLight: #ffba43;
     --headerColor: #57826a;
@@ -971,6 +974,7 @@
 @media only screen and (min-width: 0rem) {
   #cta-384 {
     padding: var(--sectionPadding);
+    background-color: #1a1a1a;
   }
   #cta-384 .cs-container {
     width: 100%;
@@ -982,6 +986,9 @@
     /* 48px - 64px */
     gap: clamp(3rem, 6vw, 4rem);
   }
+  #cta-384 #button-2 {
+    background-color: var(--primaryLight);
+  }
   #cta-384 .cs-content {
     /* set text align to left if content needs to be left aligned */
     text-align: center;
@@ -991,6 +998,10 @@
     flex-direction: column;
     /* centers content horizontally, set to flex-start to left align */
     align-items: center;
+  }
+  #cta-384 .cs-title,
+  #cta-384 .cs-text {
+    color: #fff;
   }
   #cta-384 .cs-text {
     margin-bottom: 1rem;
@@ -1075,9 +1086,13 @@
 /* Mobile */
 @media only screen and (min-width: 0rem) {
   #footer {
-    background: #1c1c1c;
+    background: #f7f7f7;
     padding: 5.25rem 0 calc(20 / 16 * 1rem);
+    padding-top: 0;
     font-size: min(4vw, 1.2em);
+  }
+  #footer .container {
+    margin-top: 3rem;
   }
   #footer .left-section {
     margin: auto;
@@ -1103,7 +1118,7 @@
     width: 100%;
     font-size: 0.875rem;
     line-height: 1.92857143rem;
-    color: #fff;
+    color: #606060;
     text-align: center;
   }
   #footer .right-section {
@@ -1129,12 +1144,12 @@
     margin-bottom: 0.75rem;
     list-style: none;
     font-size: 1.125rem;
-    color: #fff;
+    color: #606060;
   }
   #footer .right-section .lists ul li a {
     text-decoration: none;
     line-height: 1.16666667em;
-    color: #fff;
+    color: #606060;
     transition: color 0.3s;
   }
   #footer .right-section .lists ul li a:hover {
@@ -1147,7 +1162,7 @@
     font-size: 1.125rem;
     line-height: 1.16666667em;
     font-weight: bold;
-    color: #fff;
+    color: #1a1a1a;
   }
   #footer .right-section .lists ul h2:before {
     position: absolute;
@@ -1188,7 +1203,7 @@
     width: 96%;
     font-size: 1rem;
     line-height: 2.25rem;
-    color: #fff;
+    color: #1a1a1a;
     text-align: center;
   }
   #footer .credit a {
@@ -1215,9 +1230,10 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     margin: auto;
+    padding: 0;
+    margin-top: 5rem;
     max-width: 82.5rem;
     width: 96%;
-    padding: 0;
   }
   #footer .left-section {
     margin: 0;

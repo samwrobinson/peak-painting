@@ -85,7 +85,7 @@ eleventyNavigation:
             <p class="cs-text">
                 At Peak Painting, we transform homes and businesses across Vermont with professional interior and exterior painting services.
             </p>
-            <a href="" class="cs-button-solid">Get a Quote</a>
+            <a href=""  id="button-1" class="cs-button-solid">Get a Quote</a>
             <div class="cs-reviews" aria-hidden="true">
                 <div class="cs-reviews-flex">
                     <img class="cs-reviews-img" decoding="async" fetchpriority="high" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/hero-profile1.png" alt="icon" width="48" height="48">
@@ -419,7 +419,7 @@ eleventyNavigation:
     <ul class="cs-card-group">
         <li class="cs-item">
             <picture class="cs-picture">
-                <img class="cs-icon" src="https://csimg.nyc3.digitaloceanspaces.com/Stats/person-gold.svg" alt="icon" width="35" height="40" loading="lazy" decoding="async" aria-hidden="true">
+                <img class="cs-icon" src="/assets/svgs/person.svg" alt="icon" width="35" height="40" loading="lazy" decoding="async" aria-hidden="true">
             </picture>
             <div class="cs-flex-group">
                 <span class="cs-number">50+</span>
@@ -428,7 +428,7 @@ eleventyNavigation:
         </li>
         <li class="cs-item">
             <picture class="cs-picture">
-                <img class="cs-icon" src="https://csimg.nyc3.digitaloceanspaces.com/Stats/group-gold.svg" alt="icon" width="40" height="35" loading="lazy" decoding="async" aria-hidden="true">
+                <img class="cs-icon" src="/assets/svgs/group.svg" alt="icon" width="40" height="35" loading="lazy" decoding="async" aria-hidden="true">
             </picture>
             <div class="cs-flex-group">
                 <span class="cs-number">850+</span>
@@ -437,7 +437,7 @@ eleventyNavigation:
         </li>
         <li class="cs-item">
             <picture class="cs-picture">
-                <img class="cs-icon" src="https://csimg.nyc3.digitaloceanspaces.com/Stats/award-gold.svg" alt="icon" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true">
+                <img class="cs-icon" src="/assets/svgs/award.svg" alt="icon" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true">
             </picture>
             <div class="cs-flex-group">
                 <span class="cs-number">12</span>
@@ -446,7 +446,7 @@ eleventyNavigation:
         </li>
         <li class="cs-item">
             <picture class="cs-picture">
-                <img class="cs-icon" src="https://csimg.nyc3.digitaloceanspaces.com/Stats/check-gold.svg" alt="icon" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true">
+                <img class="cs-icon" src="/assets/svgs/check-v2.svg" alt="icon" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true">
             </picture>
             <div class="cs-flex-group">
                 <span class="cs-number">98%</span>
@@ -464,25 +464,25 @@ eleventyNavigation:
     <div class="cs-container">
         <ul class="cs-card-group">
             <li class="cs-item">
-                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/ecomm-thumb.svg"
+                <img class="cs-icon" src="/assets/svgs/shield.svg"
                         alt="icon" width="48" height="48" loading="lazy" decoding="async">
                 <span class="cs-stat">3-Year Exterior Warranty</span>
                 <span class="cs-info">Vermont winters can be harsh on homes. We make sure to build this into our business, so you’re home is protected no matter the weather.</span>
             </li>
             <li class="cs-item">
-                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/ecomm-package.svg"
+                <img class="cs-icon" src="/assets/svgs/communication.svg"
                         alt="icon" width="48" height="48" loading="lazy" decoding="async">
                 <span class="cs-stat">Clear & Honest Communication</span>
                 <span class="cs-info">Our clients are never left in the dark. We promise to keep you in the loop at every step in the process, so we are always on the same page.</span>
             </li>
             <li class="cs-item">
-                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/ecomm-hand.svg"
+                <img class="cs-icon" src="/assets/svgs/pricetag.svg"
                         alt="icon" width="48" height="48" loading="lazy" decoding="async">
                 <span class="cs-stat">Fair Pricing</span>
                 <span class="cs-info">Having a warm and welcoming home shouldn’t break the bank. Everyone deserves to have a home that they are excited to show off, and we work directly with our clients to accomplish that.</span>
             </li>
             <li class="cs-item">
-                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/ecomm-hand.svg"
+                <img class="cs-icon" src="/assets/svgs/protected-user.svg"
                         alt="icon" width="48" height="48" loading="lazy" decoding="async">
                 <span class="cs-stat">Fully Licensed & Insured</span>
                 <span class="cs-info">We are fully covered, so you can sit back and relax while your home is completely transformed!</span>
@@ -516,31 +516,47 @@ eleventyNavigation:
 </section>
 
 <!-- ============================================ -->
-<!--                 Side By Side                 -->
+<!--                Side By Side                  -->
 <!-- ============================================ -->
 
-<section id="sbs-578-alt">
+<section id="sbs-1640">
     <div class="cs-container">
-        <picture class="cs-picture">
-            <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/sbs-job.jpeg" | resize({width: 650, height: 600}) | webp %}">
-            <!--Tablet and above Image-->
-            <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/sbs-job.jpeg" | resize({width: 818, height: 1290}) | webp %}">
-            <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/sbs-job.jpeg" | resize({width: 818, height: 1290}) | webp %}" alt="Freshly painted home.">
-        </picture>
         <div class="cs-content">
             <span class="cs-topper">What We Do</span>
             <h2 class="cs-title">House Painting Contractors For Oak Harbor</h2>
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/sbs-job.jpeg" | resize({width: 650, height: 600}) | webp %}">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/sbs-job.jpeg" | resize({width: 818, height: 1290}) | webp %}">
+                <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/sbs-job.jpeg" | resize({width: 818, height: 1290}) | webp %}" alt="Freshly painted home.">
+            </picture>
+        </div>
+        <div class="cs-stats-group">
             <p class="cs-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                Aqestic recusandae laudantium optio amet a quisquam saepe aliquid, voluptate praesentium dicta fuga dolor error perspiciatis voluptatem eum cupiditate totam reiciendis quam minus inventore sint rem impedit esse quasi Tenetur sed reprehenderit earum a magni aliquid blanditiis dolores, veritatis soluta autem beatae officia expedita ipsum rerum doloribus sit provident delectus perspiciatis voluptatem eum cupiditate.
             </p>
             <p class="cs-text">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                Aqestic recusandae laudantium optio amet a quisquam saepe aliquid, voluptate praesentium dicta fuga dolor error perspiciatis voluptatem eum cupiditate totam reiciendis quam minus inventore sint rem impedit esse quasi Tenetur sed reprehenderit earum a magni aliquid blanditiis dolores, veritatis soluta autem beatae officia expedita ipsum rerum doloribus sit provident delectus perspiciatis voluptatem eum cupiditate.
             </p>
-            <a href="" class="cs-button-solid">Get Free Quote</a>
+            <ul class="cs-stats">
+                <li class="cs-stat">
+                    <span class="cs-number">475</span>
+                    <span class="cs-desc">Repeat Customers</span>
+                </li>
+                <li class="cs-stat">
+                    <span class="cs-number">2K</span>
+                    <span class="cs-desc">Satisfied Customers</span>
+                </li>
+                <li class="cs-stat">
+                    <span class="cs-number">37</span>
+                    <span class="cs-desc">Professional Team</span>
+                </li>
+            </ul>
         </div>
     </div>
 </section>
+                                
                                 
 <!-- ============================================ -->
 <!--                    FAQ                       -->
