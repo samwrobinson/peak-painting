@@ -386,6 +386,9 @@
     /* set text align to center if content needs to be centrally aligned */
     text-align: left;
   }
+  #services-1267 .cs-title {
+    color: var(--main-dark);
+  }
   #services-1267 #services-1267#services-1267#services-1267 .cs-button-solid {
     font-size: 1rem;
     /* 46px - 56px */
@@ -445,7 +448,7 @@
     font-size: 1.25rem;
     line-height: 1.2em;
     margin: 0 0 1.25rem 0;
-    color: var(--headerColor);
+    color: var(--main-dark);
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -591,7 +594,8 @@
     font-weight: 900;
     line-height: 1.2em;
     margin-bottom: 0.25rem;
-    color: var(--headerColor);
+    color: var(--main-dark);
+    font-family: 'Montserrat', sans-serif;
     display: block;
   }
   #stats-1574 .cs-info {
@@ -708,7 +712,7 @@
     line-height: 1.2em;
     font-weight: 700;
     margin: 0;
-    color: var(--headerColor);
+    color: var(--main-dark);
   }
   #services-573 .cs-item-text {
     /* 14px - 16px */
@@ -786,6 +790,175 @@
 /* Desktop 1024px */
 @media only screen and (min-width: 64rem) {
   #services-573 .cs-item {
+    width: 31%;
+  }
+}
+/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #services-573-alt {
+    padding: var(--sectionPadding);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #services-573-alt:before {
+    /* red box background, removed at tablet */
+    content: "";
+    width: 100%;
+    height: 100vw;
+    max-height: 25rem;
+    background: var(--primary);
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #services-573-alt .cs-container {
+    width: 100%;
+    max-width: 80em;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+  #services-573-alt .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #services-573-alt .cs-topper,
+  #services-573-alt .cs-title {
+    max-width: 31.25rem;
+    color: var(--bodyTextColorWhite);
+  }
+  #services-573-alt .cs-card-group {
+    width: 100%;
+    max-width: 73.375rem;
+    margin: 0;
+    /* 36px - 80px top & bottom */
+    /* 20px - 80px right & left */
+    padding: clamp(2.25rem, 6vw, 5rem) clamp(1.25rem, 5.6vw, 5rem);
+    background-color: #fff;
+    box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1);
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* changes at in-between */
+    gap: 1.25rem;
+  }
+  #services-573-alt .cs-item {
+    width: 100%;
+    text-align: left;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  #services-573-alt .cs-h3 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 3vw, 1.5625rem);
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--main-dark);
+  }
+  #services-573-alt .cs-item-text {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 3vw, 1rem);
+    line-height: 1.5em;
+    font-weight: 400;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  #services-573-alt .button {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #services-573-alt .cs-button-solid {
+    max-height: 3rem;
+    color: #fff;
+    border-radius: 4px;
+  }
+}
+/* In-between - 550px */
+@media only screen and (min-width: 34.375rem) {
+  #services-573-alt .cs-card-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* 48px - 64px */
+    row-gap: clamp(3rem, 6vw, 4rem);
+  }
+  #services-573-alt .cs-item {
+    width: 47%;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #services-573-alt:before {
+    display: none;
+  }
+  #services-573-alt .cs-container {
+    max-width: 70em;
+  }
+  #services-573-alt .cs-content {
+    text-align: left;
+    width: 50%;
+    /* pushes to the right, forcing it to the left */
+    margin-left: auto;
+    /* 32px - 40px */
+    padding: clamp(2rem, 4vw, 2.5rem);
+    padding-bottom: 0;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    align-items: flex-start;
+    position: relative;
+  }
+  #services-573-alt .cs-content:before {
+    /* red box background, we add it to the .cs-content so it can respond to it's changes in height and width to create the box. By doing it this way, the .cs-content and .cs-card-group don't actually have to overlap. We can control the spacing between it and the .cs-card-content with flexbox and let this pseudo box's absolute position create the overlapping box. */
+    content: "";
+    min-width: 600px;
+    max-width: 800px;
+    /* if the h2 changes how many lines tall it is, it changes the height of the .cs-content, which this box will respond to it by always be 2.5X the .cs-content height, this makes it responsive */
+    height: 250%;
+    background: var(--primary);
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: 0;
+    right: -5%;
+    z-index: -1;
+  }
+  #services-573-alt .cs-topper,
+  #services-573-alt .cs-title {
+    width: 100%;
+    text-align: right;
+    padding-right: 0;
+  }
+  #services-573-alt .cs-card-group {
+    width: 88%;
+    /* pushes to the left, sending it to the right */
+    margin-left: auto;
+  }
+}
+/* Desktop 1024px */
+@media only screen and (min-width: 64rem) {
+  #services-573-alt .cs-item {
     width: 31%;
   }
 }
