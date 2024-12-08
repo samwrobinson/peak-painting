@@ -1,6 +1,6 @@
 ---
-title: 'Contact | Code Stitch Web Designs'
-description: 'Meta description for the page'
+title: 'Contact Peak Painting | Professional House Painters in Southern Vermont'
+description: "Get a free estimate from Vermont's trusted house painters. Serving Woodstock and southern Vermont with professional interior, exterior, and cabinet painting services. Call (802) 291-1129 today!"
 preloadImg: '/assets/images/cabinets2.jpg'
 permalink: 'contact/'
 eleventyNavigation:
@@ -24,76 +24,180 @@ eleventyNavigation:
     <section id="int-hero">
         <h1 id="home-h">Contact Us</h1>
         <picture>
-            <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-            <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/barn-header.png" | resize({width: 650, height: 400}) | webp %}">
+            <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/barn-header.png" | resize({width: 2018, height: 910, position: "top" }) | webp %}">
+            <img aria-hidden="true" decoding="async" src="{% getUrl "/assets/images/barn-header.png" | resize({width: 2018, height: 910, position: "top" }) | webp %}" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
         </picture>
     </section>
 
-    <!-- ============================================ -->
-    <!--                Contact Form                  -->
-    <!-- ============================================ -->
+  <!-- ============================================ -->
+<!--                    Form                      -->
+<!-- ============================================ -->
 
-    <section id="cs-contact">
-        <div class="cs-container">
-            <form id="cs-form" name="Contact Form" method="post">
-                <div class="cs-content">
-                    <span class="cs-topper">Contact</span>
-                    <h2 class="cs-title">Get in Touch</h2>
-                    <p class="cs-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus elementum ullamcorper ipsum porttitor aliquam. Id magna urna ultrices odio pulvinar. Sed ut.
-                    </p>
-                </div>
-                <label>
-                    Name
-                    <input required type="text" id="name" name="name" placeholder="Name">
-                </label>
-                <label>
-                    Email
-                    <input required type="text" id="email" name="email" placeholder="Email">
-                </label>
-                <label>
-                    Phone
-                    <input required type="text" id="phone" name="phone" placeholder="Phone">
-                </label>
-                <label>
-                    How Did You Find Us
-                    <input type="text" id="find" name="find-us" placeholder="How did you find us?">
-                </label>
-                <label class="cs-label-message">
-                    Message
-                    <textarea required name="Message" id="message" placeholder="Write message..."></textarea>
-                </label>
-                <button class="cs-button-solid" type="submit">Submit Message</button>
-            </form>
-            <div class="cs-right-section">
-                <!--Email-->
-                <span class="cs-header">Email</span>
-                <a class="cs-link" href="mailto:{{client.email}}">{{client.email}}</a>
-                <!--Phone-->
-                <span class="cs-header">Phone</span>
-                <a class="cs-link" href="tel:{{client.phoneForTel}}">{{client.phoneFormatted}}</a>
-                <!--Address-->
-                <span class="cs-header">Address</span>
-                <a class="cs-link" href="{{client.address.mapLink}}">
-                    {{client.address.lineOne}},
-                    <br/>
-                    {{client.address.lineTwo}},
-                    <br/>
-                    <span class="cs-block">
-                        {{client.address.city}}
-                        {{client.address.state}}
-                        {{client.address.zip}}
-                    </span>
-                </a>
-
-                <!-- Background Image-->
-                <picture class="cs-bg-picture">
-                    <source media="(min-width: 601px)" srcset="/assets/images/skyscraper.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/skyscraper.jpg" alt="building" loading="lazy" width="2500" height="1667">
-                </picture>
-
-            </div>
+<section id="cs-contact-485">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Transform Your Home with <span class="cs-color">Vermont's Trusted Painters</span></h2>
+            <p class="cs-text">
+                Looking for professional house painters in southern Vermont? Peak Painting delivers premium results for interior, exterior, and cabinet painting projects. Contact our paint contractors today for a free consultation and estimate. Serving Woodstock, Manchester, and surrounding communities.
+            </p>
+            <span class="cs-heading">Ready to start your project?</span>
+            <span class="cs-heading">Contact our Vermont painting team:</span>
+            <a href="tel:802-291-1129" class="cs-link">(802) 291-1129</a>
+            <a href="mailto:jackson@peakpainting.co" class="cs-link">jackson@peakpainting.co</a>
         </div>
-    </section>
+        <!--Form-->
+        <form id="cs-form-485" name="Contact Form" method="post">
+            <h3 class="cs-h3">Schedule Consult</h3>
+            <label class="cs-label">
+                Name
+                <input class="cs-input" required type="text" id="name-485" name="name" placeholder="Name">
+            </label>
+            <label class="cs-label">
+                Phone
+                <input class="cs-input" required type="text" id="phone-485" name="phone" placeholder="Phone">
+            </label>
+            <label class="cs-label">
+                Email
+                <input class="cs-input" required type="text" id="email-485" name="email" placeholder="Email">
+            </label>
+            <label class="cs-label">
+                How Did You Find Us
+                <input class="cs-input" type="text" id="find-485" name="find-us" placeholder="How did you find us?">
+            </label>
+            <label class="cs-label cs-label-message">
+                What do you need help with?
+                <select name="services" id="cs-select-485">
+                    <option value="">Select a Service</option>
+                    <option value="exterior">Full Exterior House Painting</option>
+                    <option value="interior">Interior House Painting</option>
+                    <option value="cabinets">Cabinet Refinishing & Painting</option>
+                    <option value="commercial">Commercial Painting Services</option>
+                    <option value="other">Other Painting Services</option>
+                </select>
+            </label>
+            <label class="cs-label">
+                Tell us a bit about your project!
+                <textarea class="cs-textarea" type="text" id="find-485" name="find-us" placeholder="I would like to re-paint my interior..."></textarea>
+            </label>
+            <button class="cs-button-solid cs-submit" type="submit">Book a Consult</button>
+        </form>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/contact-image.jpeg" | resize({width: 375, height: 1300}) | webp %}">
+        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/contact-image.jpeg" | resize({width: 2018, height: 1494, position: "attention" }) | webp({quality: 20}) %}">
+        <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/contact-image.jpeg" | resize({width: 2018, height: 1494, position: "attention" }) | webp({quality: 20}) %}" alt="Red home in the snow" aria-hidden="true">
+    </picture>
+</section>
+
+
+<!-- ============================================ -->
+<!--                Contact Strip                 -->
+<!-- ============================================ -->
+
+<!-- No headers, so no section tag -->
+<div id="ContactStrip-327">
+    <ul class="cs-stat-group">
+        <li class="cs-item">
+            <picture class="cs-picture">
+                <img class="cs-icon" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/phone-grey.svg" alt="icon" width="35" height="40" loading="lazy" decoding="async" aria-hidden="true">
+            </picture>
+            <div class="cs-flex-group">
+                <span class="cs-header">Phone</span>
+                <a href="tel:555-456-7899" class="cs-link">(802) 291-1129</a>
+            </div>
+        </li>
+        <li class="cs-item">
+            <picture class="cs-picture">
+                <img class="cs-icon" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/pin-grey.svg" alt="icon" width="40" height="35" loading="lazy" decoding="async" aria-hidden="true">
+            </picture>
+            <div class="cs-flex-group">
+                <span class="cs-header">Address</span>
+                <a href="" class="cs-link">Woodstock, <br> Vermont</a>
+            </div>
+        </li>
+        <li class="cs-item">
+            <picture class="cs-picture">
+                <img class="cs-icon" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/clock-grey.svg" alt="icon" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true">
+            </picture>
+            <div class="cs-flex-group">
+                <span class="cs-header">Open Hours</span>
+                <span class="cs-hours">Monday To Friday</span>
+                <span class="cs-hours">9:00 AM - 5:30 PM</span>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!-- ============================================ -->
+<!--                    FAQ                       -->
+<!-- ============================================ -->
+
+<section id="ContactFAQ-327">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">FAQ</span>
+            <h2 class="cs-title">Frequently Asked Questions</h2>
+        </div>
+        <div class="cs-flex-group">
+            <ul class="cs-faq-group">
+                <!-- Active class added as default -->
+                <li class="cs-faq-item active">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            How can I hire the best house painters near me?
+                        </span>
+                    </button>
+                    <p class="cs-item-p">
+                        Look no further than Peak Painting, located in Woodstock, VT! We provide a comprehensive range of painting services, including interior and exterior painting for residential and commercial properties, cabinet refinishing, drywall repairs, and more.
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            How do I request a painting estimate for my project?
+                        </span>
+                    </button>
+                    <p class="cs-item-p">
+                        To receive an estimate for your interior or exterior house painting service, simple fill out the contact form above or give us a call at (802) 291-1129
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            Are you licensed and insured?
+                        </span>
+                    </button>
+                    <p class="cs-item-p">
+                        Yes, we are a fully licensed and insured painting company serving southern Vermont. As one of the most trusted house painters in the region, we maintain comprehensive insurance coverage including liability and workers' compensation to protect both our clients and our team. When searching for house painters near me or paint contractors in Vermont, it's crucial to verify proper licensing and insurance - and we're proud to provide documentation upon request.
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            Can you help with color selection and design advice?
+                        </span>
+                    </button>
+                    <p class="cs-item-p">
+                        Absolutely! As an experienced painting company in southern Vermont, we offer comprehensive color consultation services. Our professional house painters understand how color choices impact your home's aesthetic and value. We stay current with the latest design trends while respecting Vermont's traditional architectural styles. When you're looking for painting companies near me that offer complete service, our team provides expert guidance on color schemes, finishes, and design solutions tailored to your vision.
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            How long will the painting project take to complete?
+                        </span>
+                    </button>
+                    <p class="cs-item-p">
+                        Project timelines vary based on scope, but as one of the leading paint contractors in Vermont, we pride ourselves on efficient, high-quality work. For most residential projects, our house painters can complete exterior painting in 3-7 days and interior rooms in 1-3 days per room. During your consultation, your dedicated project manager will provide a detailed timeline specific to your needs. Unlike some painting companies that rush through jobs, we ensure thorough preparation and proper drying time between coats while staying on schedule.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+{% include 'components/cta.html' %}
+                                
 {% endblock %}

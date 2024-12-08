@@ -1,6 +1,6 @@
 ---
-title: 'About | Code Stitch Web Designs'
-description: 'Meta description for the page'
+title: 'About Peak Painting | Vermont House Painters Since 2022'
+description: 'Family-owned house painters in southern Vermont with 7+ years of experience. Trusted by 80+ homeowners for professional interior and exterior painting services in Woodstock and surrounding areas.'
 preloadImg: '/assets/images/cabinets2.jpg'
 permalink: 'about/'
 eleventyNavigation:
@@ -15,23 +15,19 @@ eleventyNavigation:
 {% endblock %}
 
 {% block body %}
-   <!-- ============================================ -->
+<!-- ============================================ -->
 <!--                   Banner                     -->
 <!-- ============================================ -->
 
 <div id="Aboutbanner-328">
     <div class="cs-container">
         <span class="cs-int-title">About Us</span>
-        <div class="cs-breadcrumbs">
-            <a href="" class="cs-link">Home</a>
-            <a href="" class="cs-link cs-active">About Us</a>
-        </div>
     </div>
     <!--Background Image-->
     <picture class="cs-background">
-        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Banners/library-m.jpg">
-        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Banners/library.jpg">
-        <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Banners/library.jpg" alt="library" width="1920" height="375">
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/barn-header.png" | resize({width: 650, height: 400}) | webp %}">
+        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/barn-header.png" | resize({width: 2018, height: 910, position: "top" }) | webp %}">
+        <img aria-hidden="true" decoding="async" src="{% getUrl "/assets/images/barn-header.png" | resize({width: 2018, height: 910, position: "top" }) | webp %}" alt="Peak Painting team - professional house painters in southern Vermont" loading="eager" width="2500" height="1667">
     </picture>
 </div>
 
@@ -39,40 +35,43 @@ eleventyNavigation:
 <!--                 Side By Side                 -->
 <!-- ============================================ -->
 
-<section id="ABoutRPsbs-328">
+<section id="sbs-297">
     <div class="cs-container">
         <!-- Left Image Section -->
         <div class="cs-image-group">
-            <picture class="cs-picture cs-picture1">
-                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/lawyers-m.jpg">
-                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/lawyers.jpg">
-                <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/lawyers.jpg" alt="lawyers" width="522" height="581" aria-hidden="true">
-            </picture>
-            <picture class="cs-picture cs-picture2">
-                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/gavel-m.jpg">
-                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/gavel.jpg">
-                <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/gavel.jpg" alt="gavel" width="414" height="400" aria-hidden="true">
+            <!--Floating Box-->
+            <div class="cs-box">
+                <span class="cs-number">7</span>
+                <span class="cs-desc">years of experience</span>
+                <!--Background image for cs-box-->
+                <picture class="cs-box-picture">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/trees.jpeg" | resize({width: 408, height: 408}) | webp %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/trees.jpeg" | resize({width: 464, height: 464}) | webp %}">
+                    <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/trees.jpeg" | resize({width: 464, height: 464}) | webp %}" alt="Exterior painting project by Vermont paint contractors" aria-hidden="true">
+                </picture>
+            </div>
+            <!--Big Background Image-->
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/red-house.jpeg" | resize({width: 686, height: 758}) | webp %}">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/red-house.jpeg" | resize({width: 818, height: 1062, position: "attention" }) | webp %}">
+                <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/red-house.jpeg" | resize({width: 818, height: 1062, position: "attention" }) | webp %}" alt="Red home in the snow" aria-hidden="true">
             </picture>
         </div>
         <!-- Right Content Section-->
         <div class="cs-content">
-            <span class="cs-topper">About Us</span>
-            <h2 class="cs-title">About Stitch Law</h2>
+            <span class="cs-topper">Why Choose Us</span>
+            <h2 class="cs-title">Peak Painting’s Mission</h2>
             <p class="cs-text">
-                In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
+                At Peak Painting, we transform homes and businesses across Vermont with professional interior and exterior painting services. Guided by integrity, transparency, and reliability, we’ve built a company that people trust and love.
             </p>
-            <div class="cs-quote">
-                <span class="cs-quote-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Classei consequat tincidunt turpis sit amet imperdiet for mind.
-                </span>
-                <span class="cs-name">Justin Time</span>
-                <span class="cs-job">CEO-Founder</span>
-                <img class="cs-quote-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg" alt="gavel" width="136" height="77">
-            </div>
-            <a href="" class="cs-button-solid">About Us</a>
+            <p class="cs-text">
+                What began as a shared vision between two brothers has become a business rooted in Vermont’s vibrant community. After years of experience in tech and painting, we saw an opportunity to offer something different: reliable, high-quality painting services that homeowners can count on. Vermont’s harsh weather can take a toll on properties, but with the right care, we believe every home can be as beautiful as the scenery surrounding it.
+            </p>
+            <a class="cs-button-solid" aria-label="learn more about our programs" href="">Get a Quote</a>
         </div>
     </div>
 </section>
+                                
                                 
 <!-- ============================================ -->
 <!--             Side By Side Reverse             -->
@@ -83,27 +82,27 @@ eleventyNavigation:
         <!-- Left Image Section -->
         <div class="cs-image-group">
             <picture class="cs-picture cs-picture1">
-                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/lawyers-m.jpg">
-                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/lawyers.jpg">
-                <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/lawyers.jpg" alt="lawyers" width="522" height="581" aria-hidden="true">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/picture1.jpeg" | resize({width: 564, height: 628}) | webp %}">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/picture1.jpeg" | resize({width: 1044, height: 1162, position: "attention" }) | webp %}">
+                <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/picture1.jpeg" | resize({width: 1044, height: 1162, position: "attention" }) | webp %}" alt="Red home in the snow" aria-hidden="true">
             </picture>
             <picture class="cs-picture cs-picture2">
-                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/gavel-m.jpg">
-                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/gavel.jpg">
-                <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/gavel.jpg" alt="gavel" width="414" height="400" aria-hidden="true">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/picture2.jpeg" | resize({width: 428, height: 412}) | webp %}">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/picture2.jpeg" | resize({width: 780, height: 752, position: "attention" }) | webp %}">
+                <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/picture2.jpeg" | resize({width: 780, height: 752, position: "attention" }) | webp %}" alt="Interior house painting transformation in Woodstock VT" aria-hidden="true">
             </picture>
         </div>
         <!-- Right Content Section-->
         <div class="cs-content">
-            <span class="cs-topper">About Us</span>
-            <h2 class="cs-title">About Stitch Law</h2>
+            <span class="cs-topper">Not just another contractor</span>
+            <h2 class="cs-title">Your Trusted Partner</h2>
             <p class="cs-text">
-                In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
+                At Peak Painting, we go beyond paint to build lasting relationships. With over 80 homes painted and 7 years of experience, our dedicated team and meticulous planning ensure that every project reflects the highest standards of quality and care. Whether you’re refreshing your home’s interior or restoring its exterior, we’re here to bring new life to your space with vibrancy and charm.
             </p>
             <p class="cs-text">
-                In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
+                Schedule your free estimate today and discover the difference of working with a locally owned and operated company that values your trust and delivers results you’ll love.
             </p>
-            <a href="" class="cs-button-solid">About Us</a>
+            <a href="" class="cs-button-solid">Make an Appointment</a>
         </div>
     </div>
 </section>
@@ -117,97 +116,34 @@ eleventyNavigation:
     <ul class="cs-stat-group">
         <li class="cs-item">
             <picture class="cs-picture">
-                <img class="cs-icon" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/phone-gold.svg" alt="icon" width="35" height="40" loading="lazy" decoding="async" aria-hidden="true">
+                <img class="cs-icon" src="/assets/svgs/call-1.svg" alt="icon" width="35" height="40" loading="lazy" decoding="async" aria-hidden="true">
             </picture>
             <div class="cs-flex-group">
                 <span class="cs-header">Phone</span>
-                <a href="tel:555-456-7899" class="cs-link">+1 (555) 456 7899</a>
-                <a href="tel:555-456-7899" class="cs-link">+1 (555) 456 7899</a>
+                <a href="tel:802-291-1129" class="cs-link">(802) 291 1129</a>
             </div>
         </li>
         <li class="cs-item">
             <picture class="cs-picture">
-                <img class="cs-icon" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/pin-gold.svg" alt="icon" width="40" height="35" loading="lazy" decoding="async" aria-hidden="true">
+                <img class="cs-icon" src="/assets/svgs/locationpin-1.svg" alt="icon" width="40" height="35" loading="lazy" decoding="async" aria-hidden="true">
             </picture>
             <div class="cs-flex-group">
                 <span class="cs-header">Address</span>
-                <a href="" class="cs-link">123 Fake St, STE 100 <br> Somewhere, FL 98755</a>
+                <a href="" class="cs-link">Woodstock, Vermont</a>
             </div>
         </li>
         <li class="cs-item">
             <picture class="cs-picture">
-                <img class="cs-icon" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/clock-gold.svg" alt="icon" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true">
+                <img class="cs-icon" src="/assets/svgs/clock-1.svg" alt="icon" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true">
             </picture>
             <div class="cs-flex-group">
                 <span class="cs-header">Open Hours</span>
-                <span class="cs-hours">Monday To Saturday</span>
-                <span class="cs-hours">9:00 AM - 10:30 PM</span>
+                <span class="cs-hours">Monday To Friday</span>
+                <span class="cs-hours">9:00 AM - 5:30 PM</span>
             </div>
         </li>
     </ul>
 </div>
-                                
-<!-- ============================================ -->
-<!--                 Side By Side                 -->
-<!-- ============================================ -->
-
-<section id="Aboutsbs-328">
-    <div class="cs-container">
-        <!-- Left Image Section -->
-        <picture class="cs-picture">
-            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/consult-m.jpg">
-            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/consult.jpg">
-            <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/consult.jpg" alt="consult" width="520" height="680" aria-hidden="true">
-        </picture>
-        <!-- Right Content Section-->
-        <div class="cs-content">
-            <span class="cs-topper">Best Experience</span>
-            <h2 class="cs-title">Find Us What We Actually Do For Giving Complete Solutions.</h2>
-            <p class="cs-text">
-                In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-            </p>
-            <a class="cs-button-solid" aria-label="learn more about our programs" href="">Learn More</a>
-
-            <!--SVG Circles-->
-            <div class="cs-circles">
-                <div class="cs-circle">
-                    <!--Wrapped in a div so mobile positioning is easier-->
-                    <div class="cs-ring-wrapper">
-                        <span class="cs-number">90%</span>
-                        <!--Change the --ratio to the decimal percentage of this circle-->
-                        <svg class="cs-ring" style="--ratio: 0.90">
-                            <circle cx="50%" cy="50%" r="50%"/>
-                            <circle cx="50%" cy="50%" r="50%"/>
-                        </svg>
-                    </div>
-                    <span class="cs-desc">Case Win</span>
-                </div>
-                <div class="cs-circle">
-                    <div class="cs-ring-wrapper">
-                        <span class="cs-number">75%</span>
-                        <!--Change the --ratio to the decimal percentage of this circle-->
-                        <svg class="cs-ring" style="--ratio: 0.75">
-                            <circle cx="50%" cy="50%" r="50%"/>
-                            <circle cx="50%" cy="50%" r="50%"/>
-                        </svg>
-                    </div>
-                    <span class="cs-desc">Settle</span>
-                </div>
-                <div class="cs-circle">
-                    <div class="cs-ring-wrapper">
-                        <span class="cs-number">30%</span>
-                        <!--Change the --ratio to the decimal percentage of this circle-->
-                        <svg class="cs-ring" style="--ratio: 0.30">
-                            <circle cx="50%" cy="50%" r="50%"/>
-                            <circle cx="50%" cy="50%" r="50%"/>
-                        </svg>
-                    </div>
-                    <span class="cs-desc">Case Pending</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- ============================================ -->
 <!--                Meet The Team                 -->
@@ -216,17 +152,17 @@ eleventyNavigation:
 <section id="AboutMeet-328">
     <div class="cs-container">
         <div class="cs-content">
-            <span class="cs-topper">Meet Us</span>
-            <h2 class="cs-title">Our Team Members</h2>
+            <span class="cs-topper">Our Team</span>
+            <h2 class="cs-title">Meet Your Local Vermont Painting Team</h2>
             <p class="cs-text">
-                Aenean tincidunt id mauris idology auctor. Donec at ligula lacus. Nulla dig nissimmi quis neque interdum. 
+                Based in Woodstock, our experienced house painters bring skill, dedication, and local expertise to every project. As a family-owned painting company, we treat your home with the same care and attention we would our own.
             </p>
         </div>
         <ul class="cs-card-group">
             <li class="cs-item">
                 <div class="cs-info">
-                    <span class="cs-name">James McGuil</span>
-                    <span class="cs-job">Civil Lawyer</span>
+                    <span class="cs-name">Jackson Wood</span>
+                    <span class="cs-job">Co-Owner</span>
                 </div>
                 <!--Background Image-->
                 <picture class="cs-background">
@@ -238,61 +174,13 @@ eleventyNavigation:
             <li class="cs-item">
                 <div class="cs-info">
                     <span class="cs-name">Guy Hawkins</span>
-                    <span class="cs-job">Business Lawyer</span>
+                    <span class="cs-job">Co-Owner</span>
                 </div>
                 <!--Background Image-->
                 <picture class="cs-background">
                     <source media="(max-width: 767px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/lawyer2-m.jpg">
                     <source media="(min-width: 768px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/lawyer2.jpg">
                     <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/lawyer2.jpg" alt="lawyer" width="305" height="407">
-                </picture>
-            </li>
-            <li class="cs-item">
-                <div class="cs-info">
-                    <span class="cs-name">Jente Williams</span>
-                    <span class="cs-job">Partner / Criminal Lawyer</span>
-                </div>
-                <!--Background Image-->
-                <picture class="cs-background">
-                    <source media="(max-width: 767px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/lawyer3-m.jpg">
-                    <source media="(min-width: 768px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/lawyer3.jpg">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/lawyer3.jpg" alt="lawyer" width="305" height="407">
-                </picture>
-            </li>
-            <li class="cs-item">
-                <div class="cs-info">
-                    <span class="cs-name">James McGuil</span>
-                    <span class="cs-job">Civil Lawyer</span>
-                </div>
-                <!--Background Image-->
-                <picture class="cs-background">
-                    <source media="(max-width: 767px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/lawyer1-m.jpg">
-                    <source media="(min-width: 768px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/lawyer1.jpg">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/lawyer1.jpg" alt="lawyer" width="305" height="407">
-                </picture>
-            </li>
-            <li class="cs-item">
-                <div class="cs-info">
-                    <span class="cs-name">Guy Hawkins</span>
-                    <span class="cs-job">Business Lawyer</span>
-                </div>
-                <!--Background Image-->
-                <picture class="cs-background">
-                    <source media="(max-width: 767px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/lawyer2-m.jpg">
-                    <source media="(min-width: 768px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/lawyer2.jpg">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/lawyer2.jpg" alt="lawyer" width="305" height="407">
-                </picture>
-            </li>
-            <li class="cs-item">
-                <div class="cs-info">
-                    <span class="cs-name">Jente Williams</span>
-                    <span class="cs-job">Partner / Criminal Lawyer</span>
-                </div>
-                <!--Background Image-->
-                <picture class="cs-background">
-                    <source media="(max-width: 767px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/lawyer3-m.jpg">
-                    <source media="(min-width: 768px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/lawyer3.jpg">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/lawyer3.jpg" alt="lawyer" width="305" height="407">
                 </picture>
             </li>
         </ul>
@@ -307,7 +195,7 @@ eleventyNavigation:
     <div class="cs-container">
         <div class="cs-content">
             <span class="cs-topper">Contact Us</span>
-            <h2 class="cs-title">We Are Always Ready To Hear For You.</h2>
+            <h2 class="cs-title">Why Wait? Reach out today.</h2>
             <!--Form-->
             <form class="cs-form" id="cs-form-321-328" name="Contact Form" method="post">
                 <label class="cs-label">
@@ -339,37 +227,38 @@ eleventyNavigation:
             <ul class="cs-contact-group">
                 <li class="cs-item">
                     <span class="cs-header">
-                        <img class="cs-icon" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/phone-gold.svg" alt="icon" width="20" height="20">
+                        <img class="cs-icon" decoding="async" src="/assets/svgs/call-2.svg" alt="icon" width="20" height="20">
                         Phone
                     </span>
-                    <a href="tel:555-456 7899" class="cs-link">(555) 456 7899</a>
-                    <a href="tel:555-456 7899" class="cs-link">(555) 456 7898</a>
+                    <!-- OUTSTANDING -->
+                    <a href="tel:802-291-1129" class="cs-link">(802) 291 1129</a>
                 </li>
                 <li class="cs-item">
                     <span class="cs-header">
-                        <img class="cs-icon" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/pin-gold.svg" alt="icon" width="20" height="20">
+                        <img class="cs-icon" decoding="async" src="/assets/svgs/locationpin-2.svg" alt="icon" width="20" height="20">
                         Address
                     </span>
-                    <a href="" class="cs-link">121 Fake St, Melbourne<br> VIC 300, Australia</a>
+                    <a href="" class="cs-link">Woodstock, Vermont</a>
                 </li>
                 <li class="cs-item">
                     <span class="cs-header">
-                        <img class="cs-icon" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/clock-gold.svg" alt="icon" width="20" height="20">
+                        <img class="cs-icon" decoding="async" src="/assets/svgs/clock-2.svg" alt="icon" width="20" height="20">
                         Our Hours
                     </span>
-                    <span class="cs-link">Monday To Saturday</span>
-                    <span class="cs-link">9:00 AM - 10:30 PM</span>
+                    <span class="cs-link">Monday To Friday</span>
+                    <span class="cs-link">9:00 AM - 5:30 PM</span>
                 </li>
             </ul>
         </div>
     </div>
     <!--background image-->
     <picture class="cs-background">
-        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/round-table-m.jpg">
-        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/round-table.jpg">
-        <img decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/round-table.jpg" alt="round table" width="275" height="132" aria-hidden="true">
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/contact-image.jpeg" | resize({width: 375, height: 1357}) | webp %}">
+        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/contact-image.jpeg" | resize({width: 2018, height: 1494, position: "attention" }) | webp %}">
+        <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/contact-image.jpeg" | resize({width: 2018, height: 1494, position: "attention" }) | webp %}" alt="Red home in the snow" aria-hidden="true">
     </picture>
 </section>
+
                                 
 
     {% include 'components/cta.html' %}

@@ -1,8 +1,8 @@
 module.exports = {
     "name": "Peak Painting",
     "email": "jackson@peakpainting.co",
-    "phoneForTel": "555-779-4407",
-    "phoneFormatted": "(555) 779-4407",
+    "phoneForTel": "802-291-1129",
+    "phoneFormatted": "(802) 291-1129",
     "address": {
         "lineOne": "Peak",
         "lineTwo": "Painting",
@@ -10,7 +10,7 @@ module.exports = {
         "state": "Vermont",
         "zip": "05035",
         "country": "US",
-        "mapLink": "https://maps.app.goo.gl/TEdS5KoLC9ZcULuQ6"
+        "mapLink": "https://maps.app.goo.gl/amfVJ8AgpAbniGXh6"
     },
     "socials": {
         "facebook": "https://www.facebook.com/",

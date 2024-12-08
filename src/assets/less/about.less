@@ -141,20 +141,6 @@ body.dark-mode {
             display: block;
             z-index: -1;
 
-            &:before {
-                /* black overlay box */
-                content: "";
-                width: 100%;
-                height: 100%;
-                background: #000;
-                opacity: 0.72;
-                position: absolute;
-                display: block;
-                top: 0;
-                left: 0;
-                z-index: 1;
-            }
-
             img {
                 position: absolute;
                 top: 0;
@@ -166,6 +152,267 @@ body.dark-mode {
         }
     }
 }
+/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #sbs-297 {
+        padding: var(--sectionPadding);
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at desktop */
+            max-width: (550/16rem);
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+            width: 100%;
+            max-width: (522/16rem);
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+        }
+
+        .cs-text {
+            margin-bottom: (16/16rem);
+            &:last-of-type {
+                margin-bottom: (32/16rem);
+            }
+        }
+
+        .cs-title {
+            color: var(--main-dark);
+        }
+
+        .cs-link {
+            font-size: (20/16rem);
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--primary);
+        }
+
+        .cs-button-solid {
+            font-size: (16/16rem);
+            /* 46px - 56px */
+            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+            text-decoration: none;
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+            color: #fff;
+            min-width: (150/16rem);
+            padding: 0 (24/16rem);
+            background-color: var(--primary);
+            border-radius: (4/16rem);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            /* prevents padding from adding to the width */
+            box-sizing: border-box;
+
+            &:before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 0%;
+                background: #000;
+                opacity: 1;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                border-radius: (4/16rem);
+                transition: width 0.3s;
+            }
+
+            &:hover {
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+
+        .cs-image-group {
+            width: 100%;
+            max-width: (550/16rem);
+            /* 78px - 108px */
+            margin: 0 auto clamp(4.875rem, 16.5vw, 6.75rem);
+            position: relative;
+            display: block;
+            /* width divided by height */
+            aspect-ratio: 328/363;
+        }
+
+        .cs-picture {
+            /* big background image */
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                border-radius: (10/16rem);
+                object-fit: cover;
+            }
+        }
+
+        .cs-box {
+            /* 204px - 326px & changes at desktop */
+            width: clamp(12.75rem, 50vw, 20.375rem);
+            height: clamp(12.75rem, 50vw, 20.375rem);
+            border-radius: (10/16rem);
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: absolute;
+            left: 50%;
+            /* 38px - 60px - wrapped in a calc function to make clamp values negative */
+            bottom: ~"calc(clamp(2.375rem, 7.9vw, 3.75rem) *-1)";
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+
+        .cs-box-picture {
+            /* Background image for cs-box */
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            border-radius: (10/16rem);
+            /* clips img corners and bg corners */
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            z-index: -1;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0.65;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .cs-number {
+            /* 75px - 100px */
+            font-size: clamp(4.6875rem, 8vw, 6.25rem);
+            line-height: 1em;
+            font-weight: 900;
+            margin-bottom: (8/16rem);
+            color: var(--headerColor);
+            /* creates the transparent clipping text */
+            mix-blend-mode: screen;
+            display: block;
+            z-index: 10;
+
+            &:before {
+                /* opaque white box - For mix-blend-mode to work, we need the 
+                   white box inside the .cs-number, so we use a pseudo element.
+                   We DON'T add a position to the cs-number so the pseudo positions
+                   itself relative to the .cs-box, which has position relative. This
+                   allows us to center to .cs-number pseudo inside the .cs-box */
+                content: "";
+                /* 184px - 294px & changes at desktop */
+                width: clamp(11.5rem, 45vw, 18.375rem);
+                height: clamp(11.5rem, 45vw, 18.375rem);
+                opacity: 1;
+                background-color: #fff;
+                border-radius: (7/16rem);
+                position: absolute;
+                display: block;
+                /* these next 3 properties are an old school way to center an absolutely
+                   positioned element inside a relative position parent */
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: -1;
+            }
+        }
+
+        .cs-desc {
+            /* 16px - 25px */
+            font-size: clamp(1rem, 4vw, 1.5625rem);
+            font-weight: 700;
+            line-height: 1.2em;
+            text-transform: lowercase;
+            text-align: center;
+            width: 80%;
+            color: var(--headerColor);
+            position: relative;
+            z-index: 10;
+        }
+    }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #sbs-297 {
+        /* aligns the button */
+        text-align: left;
+        .cs-container {
+            max-width: (1280/16rem);
+            /* set to horizontal arrangement */
+            flex-direction: row;
+            justify-content: space-between;
+            gap: (160/16rem);
+        }
+
+        .cs-content {
+            text-align: left;
+            align-items: flex-start;
+        }
+
+        .cs-image-group {
+            width: 40vw;
+            max-width: (521/16rem);
+            /* 520px - 672px */
+            height: clamp(32.5rem, 51.9vw, 42rem);
+            margin: 0;
+        }
+
+        .cs-box {
+            /* 251px - 325px */
+            width: clamp(15.6875rem, 24.5vw, 20.3125rem);
+            height: clamp(15.6875rem, 24.5vw, 20.3125rem);
+            left: auto;
+            transform: none;
+            /* -52px to -102px */
+            right: ~"calc(clamp(3.25rem, 5.5vw + 1.6rem, 6.375rem) *-1)";
+            /* 62px - 80px */
+            bottom: clamp(3.875rem, 6.2vw, 5rem);
+        }
+
+        .cs-number {
+            &:before {
+                /* 226px - 293px */
+                width: clamp(14.125rem, 22.7vw, 18.3125rem);
+                height: clamp(14.125rem, 22.7vw, 18.3125rem);
+            }
+        }
+    }
+}
+
 
 /*-- -------------------------- -->
 <---       Side By Side         -->
@@ -176,149 +423,152 @@ body.dark-mode {
     #ABoutRPsbs-328,
     #AboutRPsbsr-328 {
         padding: var(--sectionPadding);
+    }
+    #ABoutRPsbs-328 .cs-container,
+    #AboutRPsbsr-328 .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+    }
+    #ABoutRPsbs-328 .cs-content,
+    #AboutRPsbsr-328 .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: 33.875rem;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+    }
 
-        .cs-container {
-            width: 100%;
-            max-width: (1280/16rem);
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            /* 48px - 64px */
-            gap: clamp(3rem, 6vw, 4rem);
-        }
-
-        .cs-content {
-            /* set text align to left if content needs to be left aligned */
-            text-align: left;
-            width: 100%;
-            max-width: (542/16rem);
-            display: flex;
-            flex-direction: column;
-            /* centers content horizontally, set to flex-start to left align */
-            align-items: flex-start;
-        }
-
-        .cs-text {
-            margin-bottom: (16/16rem);
-            &:last-of-type {
-                margin-bottom: (32/16rem);
-            }
-        }
-
-        .cs-quote {
-            margin: 0 0 (32/16rem) 0;
-            /* 16px - 32px */
-            padding: clamp(1rem, 3vw, 2rem);
-            background-color: #f7f7f7;
-            border-radius: (16/16rem);
-            position: relative;
-        }
-
-        .cs-quote-text {
-            /* 14px - 16px */
-            font-size: clamp(0.875rem, 1.5vw, 1rem);
-            line-height: 1.5em;
-            margin: 0 0 (16/16rem);
-            color: #767676;
-            display: block;
-        }
-
-        .cs-name {
-            font-size: (16/16rem);
-            line-height: 1.2em;
-            text-transform: uppercase;
-            font-weight: bold;
-            margin: 0 0 (4/16rem);
-            color: var(--headerColor);
-            display: block;
-        }
-
-        .cs-job {
-            font-size: (14/16rem);
-            line-height: 1.5em;
-            color: #767676;
-            display: block;
-        }
-
-        .cs-quote-icon {
-            /* 60px - 136px */
-            width: clamp(3.75rem, 10vw, 8.5rem);
-            height: auto;
-            position: absolute;
-            bottom: (0/16rem);
-            /* 16px - 32px */
-            right: clamp(1rem, 4vw, 2rem);
-        }
-
-        .cs-image-group {
-            /* scaling the font size with the view width */
-            font-size: ~"min(2.31vw, .7em)";
-            /* using ems so we can use font size to scale the whole section */
-            width: (631/16em);
-            height: (636/16em);
-            position: relative;
-        }
-
-        .cs-picture {
-            border-radius: (24/16em);
-            /* clips img tag corners */
-            overflow: hidden;
-            position: absolute;
-            display: block;
-
-            img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                /* makes image act like a background image */
-                object-fit: cover;
-            }
-        }
-
-        .cs-picture1 {
-            width: (522/16em);
-            height: (581/16em);
-            left: 0;
-            top: 0;
-        }
-
-        .cs-picture2 {
-            width: (414/16em);
-            height: (400/16em);
-            background-color: #fff;
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px;
-            /* 6px - 12px */
-            border: clamp(0.375em, 1.5vw, 0.75em) solid #fff;
-            right: 0;
-            bottom: 0;
-        }
+    #ABoutRPsbs-328 .cs-text:last-of-type,
+    #AboutRPsbsr-328 .cs-text:last-of-type {
+        margin-bottom: 2rem;
+    }
+    #ABoutRPsbs-328 .cs-quote,
+    #AboutRPsbsr-328 .cs-quote {
+        margin: 0 0 2rem 0;
+        /* 16px - 32px */
+        padding: clamp(1rem, 3vw, 2rem);
+        background-color: #f7f7f7;
+        border-radius: 1rem;
+        position: relative;
+    }
+    #ABoutRPsbs-328 .cs-quote-text,
+    #AboutRPsbsr-328 .cs-quote-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        margin: 0 0 1rem;
+        color: #767676;
+        display: block;
+    }
+    #ABoutRPsbs-328 .cs-name,
+    #AboutRPsbsr-328 .cs-name {
+        font-size: 1rem;
+        line-height: 1.2em;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 0 0 0.25rem;
+        color: var(--headerColor);
+        display: block;
+    }
+    #ABoutRPsbs-328 .cs-job,
+    #AboutRPsbsr-328 .cs-job {
+        font-size: 0.875rem;
+        line-height: 1.5em;
+        color: #767676;
+        display: block;
+    }
+    #ABoutRPsbs-328 .cs-quote-icon,
+    #AboutRPsbsr-328 .cs-quote-icon {
+        /* 60px - 136px */
+        width: clamp(3.75rem, 10vw, 8.5rem);
+        height: auto;
+        position: absolute;
+        bottom: 0rem;
+        /* 16px - 32px */
+        right: clamp(1rem, 4vw, 2rem);
+    }
+    #ABoutRPsbs-328 .cs-image-group,
+    #AboutRPsbsr-328 .cs-image-group {
+        /* scaling the font size with the view width */
+        font-size: min(2.31vw, 0.7em);
+        /* using ems so we can use font size to scale the whole section */
+        width: 39.4375em;
+        height: 39.75em;
+        position: relative;
+    }
+    #ABoutRPsbs-328 .cs-picture,
+    #AboutRPsbsr-328 .cs-picture {
+        border-radius: 1.5em;
+        /* clips img tag corners */
+        overflow: hidden;
+        position: absolute;
+        display: block;
+    }
+    #ABoutRPsbs-328 .cs-picture img,
+    #AboutRPsbsr-328 .cs-picture img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        /* makes image act like a background image */
+        object-fit: cover;
+    }
+    #ABoutRPsbs-328 .cs-container .cs-content .cs-title {
+        color: var(--main-dark);
+    }
+    #ABoutRPsbs-328 .cs-picture1,
+    #AboutRPsbsr-328 .cs-picture1 {
+        width: 32.625em;
+        height: 36.3125em;
+        left: 0;
+        top: 0;
+    }
+    #ABoutRPsbs-328 .cs-picture2,
+    #AboutRPsbsr-328 .cs-picture2 {
+        width: 25.875em;
+        height: 25em;
+        background-color: #fff;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px;
+        /* 6px - 12px */
+        border: clamp(0.375em, 1.5vw, 0.75em) solid #ffffff;
+        right: 0;
+        bottom: 0;
     }
 }
-
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-    #ABoutRPsbs-328,
-    #AboutRPsbsr-328 {
-        .cs-container {
-            flex-flow: row;
-            justify-content: space-between;
-            gap: (52/16rem);
-        }
-
-        .cs-image-group {
-            font-size: ~"min(1.2vw, 1em)";
-            flex: none;
-        }
-
-        .cs-content {
-            margin: 0;
-        }
+    #ABoutRPsbs-328 .cs-container,
+    #AboutRPsbsr-328 .cs-container {
+        flex-flow: row;
+        justify-content: space-between;
+        gap: 3.25rem;
+    }
+    #ABoutRPsbs-328 .cs-image-group,
+    #AboutRPsbsr-328 .cs-image-group {
+        font-size: min(1.2vw, 1em);
+        flex: none;
+    }
+    #ABoutRPsbs-328 .cs-content,
+    #AboutRPsbsr-328 .cs-content {
+        margin: 0;
+    }
+    #ABoutRPsbs-328 .cs-container .cs-content .cs-title {
+        color: var(--main-dark);
     }
 }
 
+
+                                
 /*-- -------------------------- -->
 <---    Side By Side Reverse    -->
 <--- -------------------------- -*/
@@ -335,6 +585,10 @@ body.dark-mode {
         .cs-picture2 {
             right: auto;
             left: 0;
+        }
+
+        .cs-container .cs-content .cs-title {
+            color: var(--main-dark);
         }
 
         .cs-quote {
@@ -361,7 +615,7 @@ body.dark-mode {
 @media only screen and (min-width: 0rem) {
     #AboutStrip-328 {
         padding: var(--sectionPadding);
-        background-color: #1a1a1a;
+        background-color: var(--secondary);
 
         .cs-stat-group {
             width: 100%;
@@ -400,7 +654,7 @@ body.dark-mode {
             /* 12px - 20px */
             margin-right: clamp(0.75rem, 3vw, 1.25rem);
             border-radius: 50%;
-            border: 1px solid var(--secondaryLight);
+            border: 1px solid var(--primary);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -731,6 +985,10 @@ body.dark-mode {
             gap: (16/16rem);
         }
 
+        .cs-title {
+            color: var(--main-dark);
+        }
+
         .cs-item {
             list-style: none;
             width: 100%;
@@ -768,7 +1026,7 @@ body.dark-mode {
         .cs-name {
             font-size: (20/16rem);
             font-weight: 700;
-            color: var(--primaryLight);
+            color: var(--secondary);
             line-height: 1.2em;
             margin: 0;
             display: block;
