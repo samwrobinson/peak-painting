@@ -1059,26 +1059,6 @@ body.dark-mode .cs-button-solid:before {
     position: relative;
     display: block;
   }
-  #AboutContact-328 .cs-map:before {
-    content: "";
-    position: absolute;
-    display: block;
-    /* 32px - 48px */
-    width: clamp(2rem, 4vw, 3rem);
-    height: clamp(2rem, 4vw, 3rem);
-    background: url("https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/pin-red.svg");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 1;
-    /* 148px - 220px */
-    top: clamp(9.25rem, 30.7vw, 13.75rem);
-    /* push to the center line of the div */
-    left: 50%;
-    /* push X amount of pixels from it's current position off the center line */
-    margin-left: 0.625rem;
-    z-index: 10;
-  }
   #AboutContact-328 .cs-map img {
     position: absolute;
     top: 0;
