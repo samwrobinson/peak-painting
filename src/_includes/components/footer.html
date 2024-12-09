@@ -10,7 +10,7 @@
         <div class="cs-top">
             <div class="cs-logo-group">
                 <a href="" class="cs-logo" aria-label="back to home">
-                    <img src="/assets/images/logo-retouched.png" alt="logo" loading="lazy" decoding="async" width="200" height="32" aria-hidden="true">
+                    <img src="{% getUrl "/assets/images/logo-retouched.png" | resize({width: 125, height: 75}) | webp({quality: 30}) %}" alt="Peak Painting, Woodstock Vermont and Beyond" loading="lazy" decoding="async" width="125" height="75" aria-hidden="true">
                 </a>
                 <div class="cs-contact-info">
                     <a href="" class="cs-contact-link">

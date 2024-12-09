@@ -287,7 +287,7 @@ eleventyNavigation:
                     Fully Licensed & Insured
                 </li>
             </ul>
-            <a class="cs-button-solid" aria-label="learn more about our programs" href="/about">Learn More</a>
+            <a class="cs-button-solid" aria-label="learn more about our programs" href="/about">About Us</a>
         </div>
     </div>
 </section>
@@ -312,7 +312,7 @@ eleventyNavigation:
                     <picture class="cs-picture" aria-hidden="true">
                         <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/commercial.jpg" | resize({width: 686, height: 480}) | webp %}">
                         <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/commercial.jpg" | resize({width: 603, height: 480}) | webp %}">
-                        <img decoding="async" src="{% getUrl "/assets/images/commercial.jpg" | resize({width: 603, height: 480}) | webp %}" alt="Freshly painted home." aria-hidden="true">
+                        <img decoding="async" src="{% getUrl "/assets/images/commercial.jpg" | resize({width: 603, height: 480}) | webp %}" alt="Freshly painted home." aria-hidden="true" loading="lazy">
                     </picture>
                     <div class="cs-flex">
                         <h3 class="cs-h3">Commercial Painting</h3>
@@ -326,7 +326,7 @@ eleventyNavigation:
                     <picture class="cs-picture" aria-hidden="true">
                         <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/exterior.jpeg" | resize({width: 686, height: 480}) | webp %}">
                         <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/exterior.jpeg" | resize({width: 603, height: 480}) | webp %}">
-                        <img decoding="async" src="{% getUrl "/assets/images/exterior.jpeg" | resize({width: 603, height: 480}) | webp %}" alt="Freshly painted home." aria-hidden="true">
+                        <img decoding="async" src="{% getUrl "/assets/images/exterior.jpeg" | resize({width: 603, height: 480}) | webp %}" alt="Freshly painted home." aria-hidden="true" loading="lazy">
                     </picture>
                     <div class="cs-flex">
                         <h3 class="cs-h3">Exterior House Painters</h3>
@@ -341,7 +341,7 @@ eleventyNavigation:
                     <picture class="cs-picture" aria-hidden="true">
                         <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/interior.jpeg" | resize({width: 686, height: 480}) | webp %}">
                         <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/interior.jpeg" | resize({width: 603, height: 480}) | webp %}">
-                        <img decoding="async" src="{% getUrl "/assets/images/interior.jpeg" | resize({width: 603, height: 480}) | webp %}" alt="Freshly painted home." aria-hidden="true">
+                        <img decoding="async" src="{% getUrl "/assets/images/interior.jpeg" | resize({width: 603, height: 480}) | webp %}" alt="Freshly painted home." aria-hidden="true" loading="lazy">
                     </picture>
                     <div class="cs-flex">
                         <h3 class="cs-h3">Interior House Painters</h3>
@@ -378,7 +378,7 @@ eleventyNavigation:
     </div>
     <!-- Background Graphic -->
     <picture class="cs-background">
-        <img src="/assets/images/swoosh.png" alt="waves" >
+        <img src="{% getUrl "/assets/images/swoosh.png" | resize({width: 1440, height: 610}) | webp %}" alt="waves" >
     </picture>
 </section>
                                 
@@ -405,7 +405,7 @@ eleventyNavigation:
         <picture class="cs-picture" aria-hidden="true">
             <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/living-room.jpeg" | resize({width: 686, height: 600}) | webp %}">
             <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/living-room.jpeg" | resize({width: 818, height: 1290}) | webp %}">
-            <img decoding="async" src="{% getUrl "/assets/images/living-room.jpeg" | resize({width: 818, height: 1290}) | webp %}" alt="Freshly painted home." aria-hidden="true">
+            <img decoding="async" src="{% getUrl "/assets/images/living-room.jpeg" | resize({width: 818, height: 1290}) | webp %}" alt="Freshly painted home." aria-hidden="true" loading="lazy">
         </picture>
     </div>
 </section>
@@ -512,7 +512,7 @@ eleventyNavigation:
     <picture class="cs-background" aria-hidden="true">
         <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/ranch.jpeg" | resize({width: 686, height: 600}) | webp %}">
         <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/ranch.jpeg" | resize({width: 818, height: 1290}) | webp %}">
-        <img decoding="async" src="{% getUrl "/assets/images/ranch.jpeg" | resize({width: 818, height: 1290}) | webp %}" alt="Freshly painted home." aria-hidden="true">
+        <img decoding="async" src="{% getUrl "/assets/images/ranch.jpeg" | resize({width: 818, height: 1290}) | webp %}" alt="Freshly painted home." aria-hidden="true" loading="lazy">
     </picture>
 </section>
 
@@ -530,7 +530,7 @@ eleventyNavigation:
                 <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/sbs-job.jpeg" | resize({width: 650, height: 600}) | webp %}">
                 <!--Tablet and above Image-->
                 <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/sbs-job.jpeg" | resize({width: 818, height: 1290}) | webp %}">
-                <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/sbs-job.jpeg" | resize({width: 818, height: 1290}) | webp %}" alt="Freshly painted home.">
+                <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/sbs-job.jpeg" | resize({width: 818, height: 1290}) | webp %}" alt="Freshly painted home." loading="lazy">
             </picture>
         </div>
         <div class="cs-stats-group">
