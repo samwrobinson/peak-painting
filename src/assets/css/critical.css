@@ -407,6 +407,11 @@
     flex-wrap: nowrap;
     justify-content: space-between;
   }
+  #hero-1467 .cs-background:before {
+    /* Overlay */
+    height: 90%;
+    background: linear-gradient(180deg, #1a1a1a 0%, rgba(26, 26, 26, 0.6) 80%, rgba(26, 26, 26, 0) 100%);
+  }
   #hero-1467 .cs-right {
     align-items: flex-start;
   }
@@ -454,6 +459,9 @@
   #sbsr-99 .cs-title {
     max-width: 17ch;
     color: var(--bodyTextColor);
+  }
+  #sbsr-99 h3 {
+    margin-bottom: clamp(1rem, 1.5vw, 2.5rem);
   }
   #sbsr-99 .cs-text {
     margin-bottom: 1rem;

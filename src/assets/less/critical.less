@@ -449,6 +449,14 @@
             justify-content: space-between;
         }
 
+        .cs-background {
+
+            &:before {
+                /* Overlay */
+                height: 90%;
+                background: linear-gradient(180deg, rgba(26, 26, 26, 1) 0%,  rgba(26, 26, 26, .6) 80%, rgba(26, 26, 26, 0) 100%);
+            }
+        }
         .cs-right {
             align-items: flex-start;
         }
@@ -506,6 +514,10 @@
         .cs-title {
             max-width: 17ch;
             color: var(--bodyTextColor);
+        }
+
+        h3 {
+            margin-bottom: clamp(1rem, 1.5vw, 2.5rem);
         }
 
         .cs-text {
