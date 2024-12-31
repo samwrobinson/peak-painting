@@ -12,8 +12,15 @@ eleventyNavigation:
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="stylesheet" href="/assets/css/local.css"/>
-    <link rel="stylesheet" href="/assets/css/critical.css"/>
+<!-- Critical Resources -->
+    <link rel="stylesheet" href="/assets/css/critical.css">
+    <link rel="stylesheet" href="/assets/css/local.css"
+        media="print" onload="this.media='all'; this.onload=null;">
+    <noscript>
+        <link rel="stylesheet" href="/css/local.css">
+    </noscript>
+
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/hero-m.png" | resize({width: 412, height: 1300}) | webp %}">
 
     <!-- Script for Netlify Identity -->
     <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
@@ -165,7 +172,7 @@ eleventyNavigation:
         <picture class="cs-picture" aria-hidden="true">
             <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/brothers-1.JPG" | resize({width: 686, height: 480, position: 'center' }) | webp %}">
             <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/brothers-1.JPG" | resize({width: 804, height: 1246, position: 'center' }) | webp %}">
-            <img decoding="async" src="{% getUrl "/assets/images/brothers-1.JPG" | resize({width: 804, height: 1246, position: 'center' }) | webp %}" alt="Freshly painted home." aria-hidden="true">
+            <img decoding="async" loading="lazy" src="{% getUrl "/assets/images/brothers-1.JPG" | resize({width: 804, height: 1246, position: 'center' }) | webp %}" alt="Freshly painted home." aria-hidden="true">
         </picture>
         <!-- Right Content Section-->
         <div class="cs-content">
