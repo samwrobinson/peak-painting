@@ -251,9 +251,9 @@ eleventyNavigation:
     </div>
     <!--background image-->
     <picture class="cs-background">
-        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/contact-image.jpeg" | resize({width: 375, height: 1357}) | webp %}">
-        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/contact-image.jpeg" | resize({width: 2018, height: 1494, position: "attention" }) | webp %}">
-        <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/contact-image.jpeg" | resize({width: 2018, height: 1494, position: "attention" }) | webp %}" alt="Red home in the snow" aria-hidden="true">
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/contact-image.webp" | resize({width: 375, height: 1357}) | webp %}">
+        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/contact-image.webp" | resize({width: 2018, height: 1494, position: "attention" }) | webp %}">
+        <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/contact-image.webp" | resize({width: 2018, height: 1494, position: "attention" }) | webp %}" alt="Red home in the snow" aria-hidden="true">
     </picture>
 </section>
 
