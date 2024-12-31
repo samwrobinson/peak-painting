@@ -166,21 +166,21 @@ eleventyNavigation:
                 </div>
                 <!--Background Image-->
                 <picture class="cs-background">
-                    <source media="(max-width: 767px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/lawyer1-m.jpg">
-                    <source media="(min-width: 768px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/lawyer1.jpg">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/lawyer1.jpg" alt="lawyer" width="305" height="407">
+                    <source media="(max-width: 767px)" srcset="{% getUrl '/assets/images/jackson.webp' | resize({width: 656, height: 604}) | webp %}">
+                    <source media="(min-width: 768px)" srcset="{% getUrl '/assets/images/jackson.webp' | resize({width: 610, height: 822}) | avif %}">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="{% getUrl '/assets/images/jackson.webp' | resize({width: 610, height: 822}) | avif %}" alt="lawyer" width="305" height="407">
                 </picture>
             </li>
             <li class="cs-item">
                 <div class="cs-info">
-                    <span class="cs-name">Guy Hawkins</span>
+                    <span class="cs-name">Christian Wood</span>
                     <span class="cs-job">Co-Owner</span>
                 </div>
                 <!--Background Image-->
                 <picture class="cs-background">
-                    <source media="(max-width: 767px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/lawyer2-m.jpg">
-                    <source media="(min-width: 768px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/lawyer2.jpg">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/lawyer2.jpg" alt="lawyer" width="305" height="407">
+                    <source media="(max-width: 767px)" srcset="{% getUrl '/assets/images/christian.webp' | resize({width: 656, height: 604}) | webp %}">
+                    <source media="(min-width: 768px)" srcset="{% getUrl '/assets/images/christian.webp' | resize({width: 610, height: 822}) | avif %}">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="{% getUrl '/assets/images/christian.webp' | resize({width: 610, height: 822}) | avif %}" alt="lawyer" width="305" height="407">
                 </picture>
             </li>
         </ul>
