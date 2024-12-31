@@ -38,8 +38,10 @@
         {% endif %}
 
         <!-- Sitewide Stylesheets and Scripts -->
-        <link rel="stylesheet" href="/assets/css/root.css">
-        <link rel="stylesheet" href="/assets/css/dark.css">
+        <link rel="stylesheet" href="/assets/css/root.css" media="print" onload="this.media='all'; this.onload=null;">
+        <noscript>
+            <link rel="stylesheet" href="/assets/css/root.css" />
+        </noscript>
         <script defer src="/assets/js/faq.js"></script>
         <script defer src="/assets/js/nav.js"></script>
         <script defer src="/assets/js/count.js"></script>
