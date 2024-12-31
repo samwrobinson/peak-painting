@@ -1,7 +1,6 @@
 ---
 title: 'Woodstock House Painters | Peak Painting Vermont | Local Brothers'
 description: 'Local brothers providing professional painting services in Woodstock, VT. Quality interior & exterior painting, cabinet refinishing, and more. Free estimates.'
-preloadImg: '/assets/images/peak-hero.webp'
 permalink: '/'
 tags: 'sitemap' # Sitemap will use all pages in content/, due to content.json. As index.html is not included in content/ we need to manually add the sitemap tag to this page (only).
 eleventyNavigation:
@@ -21,6 +20,8 @@ eleventyNavigation:
     </noscript>
 
     <link rel="preload" as="image" href="{% getUrl "/assets/images/hero-m.png" | resize({width: 412, height: 1300}) | webp %}">
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/logo-retouched.png" | resize({width: 125, height: 75}) | webp({quality: 30}) %}">
+    <link rel="preload" href="/assets/fonts/lato-v24-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Script for Netlify Identity -->
     <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
