@@ -92,7 +92,7 @@
     min-width: 9.375rem;
     padding: 0 1.5rem;
     background-color: var(--primary);
-    border-radius: 0.25rem;
+    border-radius: 3.75rem;
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -109,7 +109,7 @@
     top: 0;
     left: 0;
     z-index: -1;
-    border-radius: 0.25rem;
+    border-radius: 3.75rem;
     transition: width 0.3s;
   }
   #sbsr-99 .cs-button-solid:hover:before {
@@ -218,7 +218,7 @@
     min-width: 9.375rem;
     padding: 0 2rem;
     background-color: var(--primary);
-    border-radius: 0.5rem;
+    border-radius: 3.75rem;
     overflow: hidden;
     display: inline-block;
     position: relative;
@@ -237,7 +237,7 @@
     top: 0;
     left: 0;
     z-index: -1;
-    border-radius: 0.5rem;
+    border-radius: 3.75rem;
     transition: width 0.3s;
   }
   #donations .cs-button-solid:hover {
@@ -637,7 +637,7 @@
     min-width: 9.375rem;
     padding: 0 1.5rem;
     background-color: var(--primary);
-    border-radius: 0.25rem;
+    border-radius: 3.75rem;
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -654,7 +654,7 @@
     top: 0;
     left: 0;
     z-index: -1;
-    border-radius: 0.25rem;
+    border-radius: 3.75rem;
     transition: width 0.3s;
   }
   #sbs-578 .cs-button-solid:hover:before {
@@ -1000,7 +1000,7 @@
     min-width: 12.5rem;
     padding: 0 1.5rem;
     background-color: var(--secondary);
-    border-radius: 10px;
+    border-radius: 3.75rem;
     border: none;
     overflow: hidden;
     display: inline-block;
@@ -1012,6 +1012,7 @@
   #reviews-263 .cs-button-solid:before {
     content: "";
     position: absolute;
+    border-radius: 3.75rem;
     height: 100%;
     width: 0%;
     background: #000;
@@ -1569,7 +1570,7 @@
     padding: 0 2rem;
     background-color: var(--primary);
     color: #fff;
-    border-radius: 0.25rem;
+    border-radius: 3.75rem;
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -1580,7 +1581,7 @@
     height: 100%;
     background: #000;
     opacity: 1;
-    border-radius: 0.25rem;
+    border-radius: 3.75rem;
     position: absolute;
     top: 0;
     left: 0;

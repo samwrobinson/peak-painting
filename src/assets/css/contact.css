@@ -183,7 +183,7 @@
     min-width: 9.375rem;
     padding: 0 1.5rem;
     background-color: var(--secondary);
-    border-radius: 0.25rem;
+    border-radius: 3.75rem;
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -200,7 +200,7 @@
     top: 0;
     left: 0;
     z-index: -1;
-    border-radius: 0.25rem;
+    border-radius: 3.75rem;
     transition: width 0.3s;
   }
   #cs-contact-485 .cs-button-solid:hover:before {
