@@ -631,13 +631,15 @@ html {
     font-size: clamp(1rem, 2.5vw, 1.5rem);
     line-height: 1.2em;
     text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
     margin: 0;
     color: var(--headerColor);
     display: inline-block;
     position: relative;
   }
   #cs-navigation .cs-li-link.cs-active {
-    color: var(--primary);
+    color: #ffbb04;
   }
   #cs-navigation .cs-li-link:hover {
     color: var(--primary);
@@ -818,6 +820,8 @@ html {
     line-height: 1.5rem;
     text-decoration: none;
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
     color: var(--headerColor);
     display: flex;
     align-items: center;
@@ -828,7 +832,7 @@ html {
     color: var(--primary);
   }
   #cs-navigation .cs-li-link.cs-active {
-    color: var(--primary);
+    color: #ffbb04;
   }
   #cs-navigation .cs-button-solid {
     font-size: 1rem;
