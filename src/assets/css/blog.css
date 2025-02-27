@@ -116,7 +116,7 @@
     justify-content: center;
     align-items: center;
     min-height: 30vh;
-    padding-top: 3.125rem;
+    padding-top: 12.5rem;
   }
   #int-hero picture {
     z-index: -2;
@@ -153,18 +153,6 @@
     width: 96%;
     color: #fff;
     text-align: center;
-  }
-  #int-hero:before {
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: "";
-    opacity: 0.7;
-    display: block;
-    background: #000;
-    height: 100%;
-    width: 100%;
   }
 }
 /* Tablet */

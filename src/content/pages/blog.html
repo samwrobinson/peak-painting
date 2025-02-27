@@ -1,8 +1,8 @@
 ---
-title: 'Blog | Code Stitch Web Designs'
-description: 'Meta description for the page'
-preloadImg: '/assets/images/cabinets2.jpg'
-permalink: 'blog/'
+title: 'Blog | Peak Painting, Woodstock VT'
+description: "View our recent projects, hear from our satisfied customers, and explore insights, resources, and practical tips for maintaining your home's interior & exterior!"
+preloadImg: '/assets/images/logo-retouched.png'
+permalink: '/blog/'
 eleventyNavigation:
     key: Blog
     order: 500
@@ -22,9 +22,9 @@ eleventyNavigation:
     <section id="int-hero">
         <h1 id="home-h">Blog</h1>
         <picture>
-            <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-            <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
+            <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/barn-header.png' | resize({width: 750, height: 544}) | webp %}">
+            <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/barn-header.png' | resize({width: 2880, height: 916}) | webp %}">
+            <img aria-hidden="true" decoding="async" src="{% getUrl '/assets/images/barn-header.png' | resize({width: 2880, height: 916}) | webp %}" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
         </picture>
     </section>
 
@@ -84,6 +84,8 @@ eleventyNavigation:
         </div>
 
         {% include 'components/featured-post.html' %}
-        
     </div>
+
+    {% include 'components/cta.html' %}
+
 {% endblock %}
