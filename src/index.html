@@ -748,69 +748,74 @@ eleventyNavigation:
         </div>
     </div>
 </section>
-                                 
+
 <!-- ============================================ -->
-<!--                   Reviews                    -->
+<!--                    Blog                      -->
 <!-- ============================================ -->
 
-<section id="reviews-245">
+<section id="blog-2199">
     <div class="cs-container">
         <div class="cs-content">
-            <span class="cs-topper">Our Reviews</span>
-            <h2 class="cs-title">What Our Neighbors Think</h2>
+            <div class="cs-text-wrapper">
+                <span class="cs-topper">Blog & News</span>
+                <h2 class="cs-title">Our Latest News & Blogs</h2>
+            </div>
             <p class="cs-text">
-                Why read about us when you can hear from the people we've worked with? These are real reviews from Woodstock homeowners who trusted us with their painting projects.
+                View our recent projects, hear from our satisfied customers, and explore insights, resources, and practical tips for maintaining your home's interior & exterior!
             </p>
         </div>
         <ul class="cs-card-group">
-            <!-- Review 1 -->
-            <li class="cs-item">
-                <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async" src="{% getUrl "/assets/images/quote.jpeg" | resize({width: 650, height: 600}) | webp %}" alt="profile picture" width="72" height="72">
-                <p class="cs-item-text">
-                    “Peak Painting completed the exterior painting of our home. They were professional, methodical, and thorough. The crew chief was very good to work with. Their workers tidied up our yard at the end of each day, and there was no loud music.”
-                </p>
-                <div class="cs-flex-group">
-                    <span class="cs-reviewer">
-                        Christine C.
-                        <span class="cs-desc">Homeowner</span>
-                    </span>
-                    <span class="cs-rating">5.0</span>
-                    <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg" alt="stars" width="96" height="16">
-                </div>
-            </li>
-            <!-- Review 2 -->
-            <li class="cs-item">
-                <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async" src="{% getUrl "/assets/images/quote.jpeg" | resize({width: 650, height: 600}) | webp %}" alt="profile picture" width="72" height="72">
-                <p class="cs-item-text">
-                    “We are delighted with the outstanding work done by your team on our home's exterior. The transformation is incredible! The professionalism and expertise displayed by your crew were impressive.”
-                </p>
-                <div class="cs-flex-group">
-                    <span class="cs-reviewer">
-                        Tess A.
-                        <span class="cs-desc">Homeowner</span>
-                    </span>
-                    <span class="cs-rating">5.0</span>
-                    <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg" alt="stars" width="96" height="16">
-                </div>
-            </li>
-            <!-- Review 2 -->
-            <li class="cs-item">
-                <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async" src="{% getUrl "/assets/images/quote.jpeg" | resize({width: 650, height: 600}) | webp %}" alt="profile picture" width="72" height="72">
-                <p class="cs-item-text">
-                    “Nehemiah did an excellent job. He showed up when he said he would and got the job done!! He’s great and I will definitely hire him again.”
-                </p>
-                <div class="cs-flex-group">
-                    <span class="cs-reviewer">
-                        Shaun P.
-                        <span class="cs-desc">Homeowner</span>
-                    </span>
-                    <span class="cs-rating">5.0</span>
-                    <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg" alt="stars" width="96" height="16">
-                </div>
-            </li>
+            {% if collections.post | length == 0 %}
+                <li class="cs-item">
+                    <div class="cs-placeholder">
+                        <h3 class="cs-h3">Blog Posts Coming Soon!</h3>
+                        <p class="cs-item-text">Stay tuned for exciting content and updates.</p>
+                    </div>
+                </li>
+            {% elif collections.post | length == 1 %}
+                {%- for post in collections.post | reverse -%}
+                <li class="cs-item">
+                    <span class="cs-date">{{ post.date | postDate }}</span>
+                    <picture class="cs-picture">
+                        <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" width="795" height="400" decoding="async">
+                    </picture>
+                    <a href="{{ post.url }}" class="cs-flex">
+                        <div class="cs-link">
+                            <h3 class="cs-h3">{{ post.data.title }}</h3>
+                            <p class="cs-item-text">{{ post.data.description.substring(0, 150) }}{% if post.data.description.length > 150 %}...{% endif %}</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="cs-item">
+                    <div class="cs-placeholder">
+                        <h3 class="cs-h3">More Posts Coming Soon!</h3>
+                        <p class="cs-item-text">Stay tuned for more exciting content and updates.</p>
+                    </div>
+                </li>
+                {% endfor %}
+            {% else %}
+                {% set counter = 0 %}
+                {%- for post in collections.post | reverse -%}
+                    {% if counter < 3 %}
+                    <li class="cs-item">
+                        <span class="cs-date">{{ post.date | postDate }}</span>
+                        <picture class="cs-picture">
+                            <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" width="795" height="400" decoding="async">
+                        </picture>
+                        <a href="{{ post.url }}" class="cs-flex">
+                            <div class="cs-link">
+                                <h3 class="cs-h3">{{ post.data.title }}</h3>
+                                <p class="cs-item-text">{{ post.data.description.substring(0, 150) }}{% if post.data.description.length > 150 %}...{% endif %}</p>
+                            </div>
+                        </a>
+                    </li>
+                    {% set counter = counter + 1 %}
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
         </ul>
     </div>
-</section>
+</section>                    
                                 
 
     {% include 'components/cta.html' %}
