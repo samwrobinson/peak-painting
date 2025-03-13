@@ -457,7 +457,7 @@
     width: 2.25rem;
     height: 2.25rem;
     border-radius: 50%;
-    background-color: var(--secondary);
+    background-color: var(--primary);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1123,7 +1123,7 @@
     content: "";
     width: 50%;
     height: 60%;
-    background: var(--secondary);
+    background: var(--primary);
     opacity: 1;
     display: block;
     position: absolute;
@@ -1294,7 +1294,7 @@
     content: "";
     width: 50%;
     height: 60%;
-    background: var(--secondary);
+    background: var(--primary);
     opacity: 1;
     display: block;
     position: absolute;

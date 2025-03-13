@@ -57,7 +57,7 @@
     width: 3.75rem;
     height: 8px;
     margin: 0 auto 2rem;
-    background: var(--primaryLight);
+    background: var(--bodyTextColorWhite);
     border-radius: 8px;
     opacity: 1;
     display: block;
@@ -75,7 +75,7 @@
     color: #fff;
   }
   #hero-1467 #button-1 {
-    background-color: var(--primaryLight);
+    background-color: var(--primary);
   }
   #hero-1467 .cs-button-solid {
     font-size: 1rem;
@@ -181,7 +181,7 @@
     padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 4vw, 3rem);
     box-sizing: border-box;
     border-radius: 1.5rem;
-    border-top: 8px solid var(--primaryLight);
+    border-top: 8px solid var(--primary);
     background-color: #fff;
     display: flex;
     justify-content: center;

@@ -34,7 +34,7 @@ body.dark-mode .cs-button-solid:before {
   top: 0;
   left: 0;
   z-index: -1;
-  border-radius: 0.25rem;
+  border-radius: 3.75rem;
   transition: width 0.3s;
 }
 .cs-button-solid:hover:before {
@@ -204,7 +204,7 @@ body.dark-mode .cs-button-solid:before {
     top: 0;
     left: 0;
     z-index: -1;
-    border-radius: 0.25rem;
+    border-radius: 3.75rem;
     transition: width 0.3s;
   }
   #sbs-297 .cs-button-solid:hover:before {
@@ -553,7 +553,7 @@ body.dark-mode .cs-button-solid:before {
 @media only screen and (min-width: 0rem) {
   #AboutStrip-328 {
     padding: var(--sectionPadding);
-    background-color: var(--secondary);
+    background-color: var(--primary);
   }
   #AboutStrip-328 .cs-stat-group {
     width: 100%;
@@ -587,7 +587,7 @@ body.dark-mode .cs-button-solid:before {
     /* 12px - 20px */
     margin-right: clamp(0.75rem, 3vw, 1.25rem);
     border-radius: 50%;
-    border: 1px solid var(--primary);
+    border: 1px solid var(--bodyTextColorWhite);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -619,12 +619,9 @@ body.dark-mode .cs-button-solid:before {
     font-size: var(--bodyFontSize);
     line-height: 1.5em;
     text-decoration: none;
-    color: #828282;
+    color: var(--bodyTextColorWhite);
     display: block;
     transition: color 0.3s;
-  }
-  #AboutStrip-328 .cs-link:hover {
-    color: var(--primary);
   }
 }
 /* Tablet - 650px */
@@ -902,7 +899,7 @@ body.dark-mode .cs-button-solid:before {
   #AboutMeet-328 .cs-name {
     font-size: 1.25rem;
     font-weight: 700;
-    color: var(--secondary);
+    color: var(--primary);
     line-height: 1.2em;
     margin: 0;
     display: block;
@@ -971,7 +968,7 @@ body.dark-mode .cs-button-solid:before {
     gap: 3.25rem;
   }
   #AboutContact-328 .cs-topper {
-    color: var(--secondaryLight);
+    color: var(--bodyTextColorWhite);
   }
   #AboutContact-328 .cs-title {
     color: var(--bodyTextColorWhite);
@@ -1025,7 +1022,7 @@ body.dark-mode .cs-button-solid:before {
     width: 17.6875rem;
     text-transform: uppercase;
     color: var(--headerColor);
-    background-color: var(--secondaryLight);
+    background-color: var(--bodyTextColorWhite);
     border: none;
     transition: color 0.3s;
   }
@@ -1088,7 +1085,7 @@ body.dark-mode .cs-button-solid:before {
     line-height: 1.2em;
     font-weight: 700;
     margin-bottom: 0.75rem;
-    color: var(--secondaryLight);
+    color: var(--bodyTextColorWhite);
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -1169,6 +1166,7 @@ body.dark-mode .cs-button-solid:before {
   }
   #AboutContact-328 .cs-button-solid {
     margin-left: 0;
+    background-color: var(--bodyTextColorWhite);
   }
   #AboutContact-328 .cs-right {
     width: 51.6%;

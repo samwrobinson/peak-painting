@@ -61,7 +61,7 @@
     color: var(--bodyTextColorWhite);
   }
   #cs-contact-485 .cs-color {
-    color: var(--secondary);
+    color: var(--bodyTextColorWhite);
   }
   #cs-contact-485 .cs-text {
     /* 14px - 16px */
@@ -182,7 +182,7 @@
     color: #fff;
     min-width: 9.375rem;
     padding: 0 1.5rem;
-    background-color: var(--secondary);
+    background-color: var(--primary);
     border-radius: 3.75rem;
     display: inline-block;
     position: relative;
@@ -403,14 +403,14 @@
   }
   #ContactFAQ-327 .cs-faq-item.active .cs-button {
     background-color: var(--primary);
-    color: var(--secondaryLight);
+    color: var(--bodyTextColorWhite);
   }
   #ContactFAQ-327 .cs-faq-item.active .cs-button:before {
-    background-color: var(--secondaryLight);
+    background-color: var(--bodyTextColorWhite);
     transform: rotate(315deg);
   }
   #ContactFAQ-327 .cs-faq-item.active .cs-button:after {
-    background-color: var(--secondaryLight);
+    background-color: var(--bodyTextColorWhite);
     transform: rotate(-315deg);
   }
   #ContactFAQ-327 .cs-faq-item.active .cs-item-p {

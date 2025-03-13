@@ -172,6 +172,7 @@ html {
     opacity: 1;
     display: block;
     background-color: #000;
+    border-radius: 3.75rem;
     height: 100%;
     width: 0;
     transition: width 0.3s;
@@ -639,7 +640,7 @@ html {
     position: relative;
   }
   #cs-navigation .cs-li-link.cs-active {
-    color: #ffbb04;
+    color: var(--primaryLight);
   }
   #cs-navigation .cs-li-link:hover {
     color: var(--primary);
@@ -716,7 +717,7 @@ html {
     line-height: 1.5em;
     text-decoration: none;
     margin: 0;
-    color: var(--secondary);
+    color: var(--primary);
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -832,7 +833,7 @@ html {
     color: var(--primary);
   }
   #cs-navigation .cs-li-link.cs-active {
-    color: #ffbb04;
+    color: var(--primaryLight);
   }
   #cs-navigation .cs-button-solid {
     font-size: 1rem;
@@ -847,7 +848,7 @@ html {
     box-sizing: border-box;
     padding: 0 2rem;
     color: #fff;
-    background-color: var(--secondary);
+    background-color: var(--primary);
     border-radius: 3rem;
     display: inline-block;
     position: relative;
@@ -915,7 +916,7 @@ html {
     margin-bottom: 1.875rem;
     max-width: 31.25rem;
     width: 96%;
-    font-size: 2.13333333rem;
+    font-size: clamp(2.4375rem, 4.5vw, 3.0625rem);
     color: #fff;
     text-align: center;
   }
@@ -934,11 +935,8 @@ html {
 }
 /* Tablet */
 @media only screen and (min-width: 48rem) {
-  #int-hero {
-    font-size: 100%;
-  }
   #int-hero h1 {
-    font-size: 4rem;
+    font-size: clamp(2.4375rem, 4.5vw, 3.0625rem);
   }
 }
 /* Small Desktop */
@@ -972,7 +970,41 @@ html {
     gap: clamp(3rem, 6vw, 4rem);
   }
   #cta-384 #button-2 {
-    background-color: var(--primaryLight);
+    z-index: 1;
+    position: relative;
+    display: inline-block;
+    background-color: var(--bodyTextColorWhite);
+    width: auto;
+    padding: 0 1.875rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    line-height: 3.125em;
+    font-weight: bold;
+    color: var(--primary);
+    transition: color 0.3s;
+    transition-delay: 0.1s;
+    text-align: center;
+  }
+  #cta-384 #button-2:hover {
+    color: #fff;
+  }
+  #cta-384 #button-2:hover:before {
+    width: 100%;
+  }
+  #cta-384 #button-2:before {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    opacity: 1;
+    display: block;
+    background-color: #000;
+    border-radius: 3.75rem;
+    height: 100%;
+    width: 0;
+    transition: width 0.3s;
   }
   #cta-384 .cs-content {
     /* set text align to left if content needs to be left aligned */
@@ -987,6 +1019,9 @@ html {
   #cta-384 .cs-title,
   #cta-384 .cs-text {
     color: #fff;
+  }
+  #cta-384 .cs-topper {
+    color: var(--bodyTextColorWhite);
   }
   #cta-384 .cs-text {
     margin-bottom: 1rem;

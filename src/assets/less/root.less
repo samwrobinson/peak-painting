@@ -171,6 +171,7 @@
             opacity: 1;
             display: block;
             background-color: #000;
+            border-radius: 3.75rem;
             height: 100%;
 
             //Transition properties
@@ -713,7 +714,7 @@
             position: relative;
 
             &.cs-active {
-                color: #ffbb04;
+                color: var(--primaryLight);
             }
 
             &:hover {
@@ -803,7 +804,7 @@
             line-height: 1.5em;
             text-decoration: none;
             margin: 0;
-            color: var(--secondary);
+            color: var(--primary);
             display: flex;
             justify-content: flex-start;
             align-items: center;
@@ -931,7 +932,7 @@
             }
 
             &.cs-active {
-                color: #ffbb04;
+                color: var(--primaryLight);
             }
         }
 
@@ -948,7 +949,7 @@
             box-sizing: border-box;
             padding: 0 (32/16rem);
             color: #fff;
-            background-color: var(--secondary);
+            background-color: var(--primary);
             border-radius: (48/16rem);
             display: inline-block;
             position: relative;
@@ -1024,7 +1025,7 @@
             margin-bottom: (30/16rem);
             max-width: (500/16rem);
             width: 96%;
-            font-size: (64/30rem);
+            font-size: clamp(2.4375rem, 4.5vw, 3.0625rem);
             color: #fff;
             text-align: center;
         }
@@ -1048,10 +1049,9 @@
 /* Tablet */
 @media only screen and (min-width: 48rem) {
     #int-hero {
-        font-size: 100%;
 
         h1 {
-            font-size: (64/16rem);
+            font-size: clamp(2.4375rem, 4.5vw, 3.0625rem);
         }
     }
 }
@@ -1090,7 +1090,47 @@
         }
 
         #button-2 {
-            background-color: var(--primaryLight);
+            z-index: 1;
+            position: relative;
+            display: inline-block;
+            background-color: var(--bodyTextColorWhite);
+            width: auto;
+            padding: 0 (30/16rem);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: (16/16rem);
+            line-height: (50/16em);
+            font-weight: bold;
+
+            // Transition Properties
+            color: var(--primary);
+            transition: color 0.3s;
+            transition-delay: 0.1s;
+            text-align: center;
+
+            &:hover {
+                color: #fff;
+                &:before {
+                    width: 100%;
+                }
+            }
+
+            &:before {
+                z-index: -1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: "";
+                opacity: 1;
+                display: block;
+                background-color: #000;
+                border-radius: 3.75rem;
+                height: 100%;
+
+                //Transition properties
+                width: 0;
+                transition: width 0.3s;
+            }
         }
 
         .cs-content {
@@ -1106,6 +1146,10 @@
 
         .cs-title, .cs-text {
             color: #fff;
+        }
+
+        .cs-topper {
+            color: var(--bodyTextColorWhite);
         }
 
         .cs-text {

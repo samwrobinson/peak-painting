@@ -37,7 +37,7 @@ body.dark-mode {
         top: 0;
         left: 0;
         z-index: -1;
-        border-radius: (4/16rem);
+        border-radius: 3.75rem;
         transition: width 0.3s;
     }
 
@@ -230,7 +230,7 @@ body.dark-mode {
                 top: 0;
                 left: 0;
                 z-index: -1;
-                border-radius: (4/16rem);
+                border-radius: 3.75rem;
                 transition: width 0.3s;
             }
 
@@ -615,7 +615,7 @@ body.dark-mode {
 @media only screen and (min-width: 0rem) {
     #AboutStrip-328 {
         padding: var(--sectionPadding);
-        background-color: var(--secondary);
+        background-color: var(--primary);
 
         .cs-stat-group {
             width: 100%;
@@ -654,7 +654,7 @@ body.dark-mode {
             /* 12px - 20px */
             margin-right: clamp(0.75rem, 3vw, 1.25rem);
             border-radius: 50%;
-            border: 1px solid var(--primary);
+            border: 1px solid var(--bodyTextColorWhite);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -693,15 +693,9 @@ body.dark-mode {
             font-size: var(--bodyFontSize);
             line-height: 1.5em;
             text-decoration: none;
-            color: #828282;
+            color: var(--bodyTextColorWhite);
             display: block;
             transition: color.3s;
-        }
-
-        .cs-link {
-            &:hover {
-                color: var(--primary);
-            }
         }
     }
 }
@@ -1026,7 +1020,7 @@ body.dark-mode {
         .cs-name {
             font-size: (20/16rem);
             font-weight: 700;
-            color: var(--secondary);
+            color: var(--primary);
             line-height: 1.2em;
             margin: 0;
             display: block;
@@ -1106,7 +1100,7 @@ body.dark-mode {
         }
 
         .cs-topper {
-            color: var(--secondaryLight);
+            color: var(--bodyTextColorWhite);
         }
 
         .cs-title {
@@ -1167,7 +1161,7 @@ body.dark-mode {
             width: (283/16rem);
             text-transform: uppercase;
             color: var(--headerColor);
-            background-color: var(--secondaryLight);
+            background-color: var(--bodyTextColorWhite);
             border: none;
             transition: color 0.3s;
             &:hover {
@@ -1236,7 +1230,7 @@ body.dark-mode {
             line-height: 1.2em;
             font-weight: 700;
             margin-bottom: (12/16rem);
-            color: var(--secondaryLight);
+            color: var(--bodyTextColorWhite);
             display: flex;
             justify-content: flex-start;
             align-items: center;
@@ -1333,6 +1327,7 @@ body.dark-mode {
 
         .cs-button-solid {
             margin-left: 0;
+            background-color: var(--bodyTextColorWhite);
         }
 
         .cs-right {
